@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:job_networking_app/onbording_screens/otp_screen.dart';
 
 import '../constants/color_constants.dart';
 import '../constants/custom_elevated_button.dart';
@@ -51,10 +52,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 child: TextField(
                   decoration: InputDecoration(
                       border: OutlineInputBorder(
-                        borderSide: BorderSide(color: appsecondaryColor), // Set border color
+                        borderSide: BorderSide(color: appsecondaryColor),
                       ),
                       focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: appsecondaryColor), // Set focused border color
+                        borderSide: BorderSide(color: appsecondaryColor),
                       ),
                       labelText: 'Name',
                       labelStyle: TextStyle(color: appsecondaryColor)
@@ -67,10 +68,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 child: TextField(
                   decoration: InputDecoration(
                       border: OutlineInputBorder(
-                        borderSide: BorderSide(color: appsecondaryColor), // Set border color
+                        borderSide: BorderSide(color: appsecondaryColor),
                       ),
                       focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: appsecondaryColor), // Set focused border color
+                        borderSide: BorderSide(color: appsecondaryColor),
                       ),
                       labelText: 'Email',
                       labelStyle: TextStyle(color: appsecondaryColor)
@@ -112,10 +113,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   obscureText: _isConfirmPasswordHidden,
                   decoration: InputDecoration(
                     border: OutlineInputBorder(
-                      borderSide: BorderSide(color: appsecondaryColor), // Set border color
+                      borderSide: BorderSide(color: appsecondaryColor),
                     ),
                     focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: appsecondaryColor), // Set focused border color
+                      borderSide: BorderSide(color: appsecondaryColor),
                     ),
                     labelText: 'Confirm Password',
                     labelStyle: TextStyle(color: appsecondaryColor),
@@ -134,7 +135,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 ),
               ),
               SizedBox(height: screenHeight * 0.030),
-              CustomElevatedButton(onPressed: (){}, title: 'Sign Up'),
+              CustomElevatedButton(onPressed: (){
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => OtpPage(),
+                  ),
+                );
+              }, title: 'Sign Up'),
               SizedBox(height: screenHeight * 0.030),
               const Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -188,8 +196,13 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 children: [
                   Text('Already have an account? ',
                     style:TextStyle(fontSize: 12,fontWeight: FontWeight.w700,color: appTextColor),),
-                  Text('Sign In',
-                    style:TextStyle(fontSize: 12,fontWeight: FontWeight.w700,color: appPrimaryColor),),
+                  GestureDetector(
+                    onTap: (){
+                      Navigator.pop(context);
+                    },
+                    child: Text('Sign In',
+                      style:TextStyle(fontSize: 12,fontWeight: FontWeight.w700,color: appPrimaryColor),),
+                  ),
                 ],
               ),
             ],

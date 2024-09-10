@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:job_networking_app/constants/color_constants.dart';
 import 'package:job_networking_app/constants/custom_elevated_button.dart';
+import 'package:job_networking_app/onbording_screens/looking_for_screen.dart';
 import 'package:job_networking_app/onbording_screens/otp_screen.dart';
 import 'package:job_networking_app/onbording_screens/sign_up_screen.dart';
 
@@ -114,12 +115,12 @@ class _LoginPageState extends State<LoginPage> {
                 ],
               ),
               CustomElevatedButton(onPressed: (){
-                // Navigator.push(
-                //   context,
-                //   MaterialPageRoute(
-                //     builder: (context) => SignUpScreen(),
-                //   ),
-                // );
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => LookingForScreen(),
+                  ),
+                );
               }, title: 'Sign In'),
               SizedBox(height: screenHeight * 0.030),
               const Row(

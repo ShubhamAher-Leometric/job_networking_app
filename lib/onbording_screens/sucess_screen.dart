@@ -28,14 +28,14 @@ class _SucessScreenState extends State<SucessScreen> {
           children: [
             Container(
               decoration: BoxDecoration(
-                color: Colors.white, // Background color
-                borderRadius: BorderRadius.circular(16), // Rounded corners
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(16),
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.grey.withOpacity(0.3), // Light gray shadow
-                    spreadRadius: 2, // How much the shadow spreads
-                    blurRadius: 10,  // Softness of the shadow
-                    offset: Offset(0, 5), // Offset in x and y direction
+                    color: Colors.grey.withOpacity(0.3),
+                    spreadRadius: 2,
+                    blurRadius: 10,
+                    offset: Offset(0, 5),
                   ),
                 ],
               ),

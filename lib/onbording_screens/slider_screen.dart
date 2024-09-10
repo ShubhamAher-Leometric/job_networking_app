@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:job_networking_app/constants/color_constants.dart';
+import 'package:job_networking_app/onbording_screens/stand_out_screen.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class SliderScreen extends StatefulWidget {
@@ -32,24 +33,15 @@ class _SliderScreenState extends State<SliderScreen> {
     'Helping you connect with the right employers quickly and Match with jobs that suit your skills and availability.',
   ];
 
+  int currentPage = 0; // Track the current page index
+
   @override
   void initState() {
     super.initState();
-    autoScroll();
-  }
-
-  void autoScroll() {
-    Future.delayed(Duration(seconds: 3)).then((_) {
-      if (pageController.hasClients && numPages > 0) {
-        int nextPage = (pageController.page!.toInt() + 1) % numPages;
-        pageController
-            .animateToPage(
-          nextPage,
-          duration: Duration(milliseconds: 300),
-          curve: Curves.easeIn,
-        )
-            .then((_) => autoScroll());
-      }
+    pageController.addListener(() {
+      setState(() {
+        currentPage = pageController.page!.round();
+      });
     });
   }
 
@@ -62,7 +54,7 @@ class _SliderScreenState extends State<SliderScreen> {
     return Scaffold(
       body: Column(
         children: [
-          SizedBox(height: screenHeight * 0.10),
+          SizedBox(height: screenHeight * 0.15),
           buildAutoScrollingContainer(),
         ],
       ),
@@ -75,8 +67,9 @@ class _SliderScreenState extends State<SliderScreen> {
         Column(
           children: [
             Container(
-              height: 500,
+              height: 503,
               child: PageView.builder(
+                physics: NeverScrollableScrollPhysics(),
                 controller: pageController,
                 itemCount: numPages,
                 itemBuilder: (context, index) {
@@ -89,8 +82,7 @@ class _SliderScreenState extends State<SliderScreen> {
                       ),
                       SizedBox(height: 20),
                       Container(
-                        height: 150,
-                        width: MediaQuery.of(context).size.width/1.1 ,
+                        width: MediaQuery.of(context).size.width,
                         child: Center(
                           child: Text(
                             texts[index],
@@ -104,13 +96,16 @@ class _SliderScreenState extends State<SliderScreen> {
                       ),
                       SizedBox(height: 20),
                       Container(
-                        child: Text(
-                          subtexts[index],
-                          style: TextStyle(
-                            fontSize: 14,
-                            fontWeight: FontWeight.w400,
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                          child: Text(
+                            subtexts[index],
+                            style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.w400,
+                            ),
+                            textAlign: TextAlign.center,
                           ),
-                          textAlign: TextAlign.center,
                         ),
                       ),
                     ],
@@ -119,31 +114,66 @@ class _SliderScreenState extends State<SliderScreen> {
               ),
             ),
             SizedBox(height: 16),
-            Row(
-              children: [
-                Container(height: 30,width: 30,),
-                Spacer(),
-                SmoothPageIndicator(
-                  controller: pageController,
-                  count: numPages,
-                  effect: WormEffect(
-                    activeDotColor: appPrimaryColor,
-                    dotColor: Colors.grey,
-                    dotHeight: 8,
-                    dotWidth: 8,
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10.0),
+              child: Row(
+                children: [
+                  currentPage > 0
+                      ? Container(
+                    height: 50,
+                    width: 50,
+                    child: Center(
+                      child: Text(
+                        'Skip',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ),
+                  )
+                      : Container(height: 50, width: 50),
+                  Spacer(),
+                  SmoothPageIndicator(
+                    controller: pageController,
+                    count: numPages,
+                    effect: WormEffect(
+                      activeDotColor: appPrimaryColor,
+                      dotColor: Colors.grey,
+                      dotHeight: 8,
+                      dotWidth: 8,
+                    ),
                   ),
-                ),
-                Spacer(),
-                Container(
-                  height: 40,
-                  width: 40,
-                  decoration: BoxDecoration(
-                    color: appTextColor,
-                    borderRadius: BorderRadius.circular(30)
+                  Spacer(),
+                  GestureDetector(
+                    onTap: () {
+                      if (currentPage < numPages - 1) {
+                        pageController.nextPage(
+                          duration: Duration(milliseconds: 300),
+                          curve: Curves.easeIn,
+                        );
+                      } else {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => StandOutScreen(),
+                          ),
+                        );
+                      }
+                    },
+                    child: Container(
+                      height: 50,
+                      width: 50,
+                      decoration: BoxDecoration(
+                        color: appTextColor,
+                        borderRadius: BorderRadius.circular(30),
+                      ),
+                      child: Icon(Icons.arrow_forward, color: appbackgroundColor),
+                    ),
                   ),
-                  child: Icon(Icons.arrow_forward,color: appbackgroundColor,),
-                )
-              ],
+                ],
+              ),
             ),
           ],
         ),
