@@ -48,7 +48,7 @@ class _SucessScreenState extends State<SucessScreen> {
                     child: Image.asset('assets/icons/Yellow_success.png'),
                   ),
                   SizedBox(height: screenHeight * 0.030),
-                  Text('Success',style: TextStyle(fontSize: 24,fontWeight: FontWeight.w400),),
+                  Text('Success',style: TextStyle(fontSize: 24,fontWeight: FontWeight.w600),),
                   SizedBox(height: screenHeight * 0.010),
                   Padding(
                    padding: const EdgeInsets.symmetric(horizontal: 60.0),

@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:job_networking_app/constants/color_constants.dart';
-import 'package:job_networking_app/onbording_screens/stand_out_screen.dart';
+import 'package:job_networking_app/profile_screens/stand_out_screen.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class SliderScreen extends StatefulWidget {

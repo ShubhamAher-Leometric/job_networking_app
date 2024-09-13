@@ -1,23 +1,19 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:job_networking_app/onbording_screens/sucess_screen.dart';
+import 'package:job_networking_app/onbording_screens/new_password_screen.dart';
 import 'package:pinput/pinput.dart';
+
 import '../constants/color_constants.dart';
 import '../constants/custom_elevated_button.dart';
 
-class OtpPage extends StatefulWidget {
-
-  const OtpPage({Key? key,}) : super(key: key);
+class ForgetOtpScreen extends StatefulWidget {
+  const ForgetOtpScreen({super.key});
 
   @override
-  State<OtpPage> createState() => _OtpPageState();
+  State<ForgetOtpScreen> createState() => _ForgetOtpScreenState();
 }
 
-class _OtpPageState extends State<OtpPage> {
-  @override
-  void initState() {
-    super.initState();
-  }
-
+class _ForgetOtpScreenState extends State<ForgetOtpScreen> {
   @override
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;
@@ -54,11 +50,11 @@ class _OtpPageState extends State<OtpPage> {
                   },
                   child: Row(
                     children: [
-                       Icon(Icons.arrow_back_ios_new_rounded,size: 24,),
-                    Text(
+                      Icon(Icons.arrow_back_ios_new_rounded,size: 24,),
+                      Text(
                           'Back',
-                        style: const TextStyle(fontWeight: FontWeight.bold)
-                    ),
+                          style: const TextStyle(fontWeight: FontWeight.bold)
+                      ),
                     ],
                   ),
                 ),
@@ -73,7 +69,7 @@ class _OtpPageState extends State<OtpPage> {
               ),
               const Text(
                 'Please enter the code we just sent to email\n'
-                  'pratiksha.g@gmail.com',
+                    'pratiksha.g@gmail.com',
                 style: TextStyle(fontSize: 13, color: appTextColor2,),
                 textAlign: TextAlign.center,
               ),
@@ -139,7 +135,7 @@ class _OtpPageState extends State<OtpPage> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => SucessScreen(),
+                    builder: (context) => NewPasswordScreen(),
                   ),
                 );
               }, title: 'Verify'),

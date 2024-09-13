@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:job_networking_app/constants/color_constants.dart';
+import 'package:job_networking_app/profile_screens/create_profile_screen_1.dart';
 
 class StandOutScreen extends StatefulWidget {
   const StandOutScreen({super.key});
@@ -66,7 +67,14 @@ class _StandOutScreenState extends State<StandOutScreen> {
                     height: screenHeight * 0.08,
                     width: screenWidth * 0.70,
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => CreateProfileScreen_1(),
+                          ),
+                        );
+                      },
                       style: ButtonStyle(
                         backgroundColor:
                             WidgetStateProperty.all(appsecondaryColor),
