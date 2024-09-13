@@ -50,15 +50,16 @@ class _SignUpScreenState extends State<SignUpScreen> {
               SizedBox(
                 height: screenHeight * 0.08,
                 child: TextField(
+                  style: TextStyle(color: appTextfilledColor),
                   decoration: InputDecoration(
                       border: OutlineInputBorder(
-                        borderSide: BorderSide(color: appsecondaryColor),
+                        borderSide: BorderSide(color: appTextfilledColor),
                       ),
                       focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: appsecondaryColor),
+                        borderSide: BorderSide(color: appTextfilledColor),
                       ),
                       labelText: 'Name',
-                      labelStyle: TextStyle(color: appsecondaryColor)
+                      labelStyle: TextStyle(color: appTextfilledColor)
                   ),
                 ),
               ),
@@ -66,15 +67,16 @@ class _SignUpScreenState extends State<SignUpScreen> {
               SizedBox(
                 height: screenHeight * 0.08,
                 child: TextField(
+                  style: TextStyle(color: appTextfilledColor),
                   decoration: InputDecoration(
                       border: OutlineInputBorder(
-                        borderSide: BorderSide(color: appsecondaryColor),
+                        borderSide: BorderSide(color: appTextfilledColor),
                       ),
                       focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: appsecondaryColor),
+                        borderSide: BorderSide(color: appTextfilledColor),
                       ),
                       labelText: 'Email',
-                      labelStyle: TextStyle(color: appsecondaryColor)
+                      labelStyle: TextStyle(color: appTextfilledColor)
                   ),
                 ),
               ),
@@ -82,20 +84,22 @@ class _SignUpScreenState extends State<SignUpScreen> {
               SizedBox(
                 height: screenHeight * 0.08,
                 child: TextField(
+                  style: TextStyle(color: appTextfilledColor),
                   obscureText: _isPasswordHidden,
                   decoration: InputDecoration(
                     border: OutlineInputBorder(
-                      borderSide: BorderSide(color: appsecondaryColor), // Set border color
+                      borderSide: BorderSide(color: appTextfilledColor), // Set border color
                     ),
                     focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: appsecondaryColor), // Set focused border color
+                      borderSide: BorderSide(color: appTextfilledColor), // Set focused border color
                     ),
                     labelText: 'Password',
-                    labelStyle: TextStyle(color: appsecondaryColor),
+                    labelStyle: TextStyle(color: appTextfilledColor),
+                    hintText: 'Password',
                     suffixIcon: IconButton(
                       icon: Icon(
                         _isPasswordHidden ? Icons.visibility_off : Icons.visibility,
-                        color: appsecondaryColor,
+                        color: appTextfilledColor,
                       ),
                       onPressed: () {
                         setState(() {
@@ -110,20 +114,21 @@ class _SignUpScreenState extends State<SignUpScreen> {
               SizedBox(
                 height: screenHeight * 0.08,
                 child: TextField(
+                  style: TextStyle(color: appTextfilledColor),
                   obscureText: _isConfirmPasswordHidden,
                   decoration: InputDecoration(
                     border: OutlineInputBorder(
-                      borderSide: BorderSide(color: appsecondaryColor),
+                      borderSide: BorderSide(color: appTextfilledColor),
                     ),
                     focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: appsecondaryColor),
+                      borderSide: BorderSide(color: appTextfilledColor),
                     ),
                     labelText: 'Confirm Password',
-                    labelStyle: TextStyle(color: appsecondaryColor),
+                    labelStyle: TextStyle(color: appTextfilledColor),
                     suffixIcon: IconButton(
                       icon: Icon(
                         _isConfirmPasswordHidden ? Icons.visibility_off : Icons.visibility,
-                        color: appsecondaryColor,
+                        color: appTextfilledColor,
                       ),
                       onPressed: () {
                         setState(() {

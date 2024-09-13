@@ -15,24 +15,6 @@ class _SliderScreenState extends State<SliderScreen> {
   final PageController pageController = PageController();
   final int numPages = 3;
 
-  // Lists for images and texts
-  final List<String> images = [
-    'assets/images/Walkthrough 1.png',
-    'assets/images/Walkthrough 2.png',
-    'assets/images/Walkthrough 3.png',
-  ];
-
-  final List<String> texts = [
-    'Easily Find What Works for You',
-    'Earn Money and experience for every hour you work',
-    'Unlock Opportunities Start Your Journey',
-  ];
-  final List<String> subtexts = [
-    'Discover the best part-time jobs tailored for you and Find work that fits your schedule and lifestyle.',
-    'Let us guide you through every step of your job search and Simple, clear steps to land the job you want.',
-    'Helping you connect with the right employers quickly and Match with jobs that suit your skills and availability.',
-  ];
-
   int currentPage = 0; // Track the current page index
 
   @override
@@ -46,10 +28,15 @@ class _SliderScreenState extends State<SliderScreen> {
   }
 
   @override
+  void dispose() {
+    pageController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;
     double screenHeight = screenSize.height;
-    double screenWidth = screenSize.width;
 
     return Scaffold(
       body: Column(
@@ -68,15 +55,93 @@ class _SliderScreenState extends State<SliderScreen> {
           children: [
             Container(
               height: 503,
-              child: PageView.builder(
+              child: PageView(
                 physics: NeverScrollableScrollPhysics(),
                 controller: pageController,
-                itemCount: numPages,
-                itemBuilder: (context, index) {
-                  return Column(
+                children: [
+                   Column(
+              children: [
+              Image.asset(
+                'assets/images/Walkthrough 1.png',
+                fit: BoxFit.cover,
+                height: 250,
+              ),
+      SizedBox(height: 20),
+      Container(
+        width: MediaQuery.of(context).size.width,
+        child: Center(
+          child: Column(
+            children: [
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'Easily Find',
+                    style: TextStyle(
+                      fontSize: 36,
+                      fontWeight: FontWeight.w700,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                  Text(
+                    ' What',
+                    style: TextStyle(
+                      fontSize: 36,
+                      fontWeight: FontWeight.w700,
+                      color: appPrimaryColor
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                ],
+              ),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'Works',
+                    style: TextStyle(
+                      fontSize: 36,
+                      color: appPrimaryColor,
+                      fontWeight: FontWeight.w700,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                  Text(
+                    ' for You',
+                    style: TextStyle(
+                      fontSize: 36,
+                      fontWeight: FontWeight.w700,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ),
+      SizedBox(height: 20),
+      Container(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 10.0),
+          child: Text(
+            'Discover the best part-time jobs tailored for you and Find work that fits your schedule and lifestyle.',
+            style: TextStyle(
+              fontSize: 14,
+              fontWeight: FontWeight.w400,
+            ),
+            textAlign: TextAlign.center,
+          ),
+        ),
+      ),
+      ],
+    ),
+                  Column(
                     children: [
                       Image.asset(
-                        images[index],
+                        'assets/images/Walkthrough 2.png',
                         fit: BoxFit.cover,
                         height: 250,
                       ),
@@ -84,13 +149,60 @@ class _SliderScreenState extends State<SliderScreen> {
                       Container(
                         width: MediaQuery.of(context).size.width,
                         child: Center(
-                          child: Text(
-                            texts[index],
-                            style: TextStyle(
-                              fontSize: 36,
-                              fontWeight: FontWeight.w700,
-                            ),
-                            textAlign: TextAlign.center,
+                          child: Column(
+                            children: [
+                              Row(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    'Earn Money',
+                                    style: TextStyle(
+                                      fontSize: 36,
+                                      fontWeight: FontWeight.w700,
+                                        color: appPrimaryColor
+                                    ),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                  Text(
+                                    ' and',
+                                    style: TextStyle(
+                                        fontSize: 36,
+                                        fontWeight: FontWeight.w700,
+                                    ),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                ],
+                              ),
+                              Row(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    'Experience for Every',
+                                    style: TextStyle(
+                                      fontSize: 36,
+                                      fontWeight: FontWeight.w700,
+                                    ),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                ],
+                              ),
+                              Row(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    'Hour You Work',
+                                    style: TextStyle(
+                                      fontSize: 36,
+                                      fontWeight: FontWeight.w700,
+                                    ),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                ],
+                              ),
+                            ],
                           ),
                         ),
                       ),
@@ -99,7 +211,7 @@ class _SliderScreenState extends State<SliderScreen> {
                         child: Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 10.0),
                           child: Text(
-                            subtexts[index],
+                            'Let us guide you through every step of your job search and Simple, clear steps to land the job you want.',
                             style: TextStyle(
                               fontSize: 14,
                               fontWeight: FontWeight.w400,
@@ -109,8 +221,70 @@ class _SliderScreenState extends State<SliderScreen> {
                         ),
                       ),
                     ],
-                  );
-                },
+                  ),
+                  Column(
+                    children: [
+                      Image.asset(
+                        'assets/images/Walkthrough 3.png',
+                        fit: BoxFit.cover,
+                        height: 250,
+                      ),
+                      SizedBox(height: 20),
+                      Container(
+                        width: MediaQuery.of(context).size.width,
+                        child: Center(
+                          child: Column(
+                            children: [
+                              Row(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    'Unlock Opportunities',
+                                    style: TextStyle(
+                                        fontSize: 36,
+                                        fontWeight: FontWeight.w700,
+                                        color: appPrimaryColor
+                                    ),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                ],
+                              ),
+                              Row(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    'Start Your Journey',
+                                    style: TextStyle(
+                                      fontSize: 36,
+                                      fontWeight: FontWeight.w700,
+                                    ),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      SizedBox(height: 20),
+                      Container(
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                          child: Text(
+                            'Helping you connect with the right employers quickly and Match with jobs that suit your skills and availability.',
+                            style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.w400,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
               ),
             ),
             SizedBox(height: 16),
@@ -176,6 +350,46 @@ class _SliderScreenState extends State<SliderScreen> {
               ),
             ),
           ],
+        ),
+      ],
+    );
+  }
+
+  Widget buildPageContent({required String image, required String title, required String subtitle}) {
+    return Column(
+      children: [
+        Image.asset(
+          image,
+          fit: BoxFit.cover,
+          height: 250,
+        ),
+        SizedBox(height: 20),
+        Container(
+          width: MediaQuery.of(context).size.width,
+          child: Center(
+            child: Text(
+              title,
+              style: TextStyle(
+                fontSize: 36,
+                fontWeight: FontWeight.w700,
+              ),
+              textAlign: TextAlign.center,
+            ),
+          ),
+        ),
+        SizedBox(height: 20),
+        Container(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10.0),
+            child: Text(
+              subtitle,
+              style: TextStyle(
+                fontSize: 14,
+                fontWeight: FontWeight.w400,
+              ),
+              textAlign: TextAlign.center,
+            ),
+          ),
         ),
       ],
     );

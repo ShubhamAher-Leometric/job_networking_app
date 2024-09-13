@@ -23,7 +23,7 @@ class _StandOutScreenState extends State<StandOutScreen> {
           Positioned(
             bottom: 0,
             child: Container(
-              height: 250,
+              height: 260,
               width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
                 color: appbackgroundColor,
@@ -43,10 +43,19 @@ class _StandOutScreenState extends State<StandOutScreen> {
                 children: [
                   SizedBox(height: screenHeight * 0.020),
 
-                  Text(
-                    'Stand Out and\nGet Hired',
-                    style: TextStyle(fontSize: 36, fontWeight: FontWeight.w700),
-                    textAlign: TextAlign.center,
+                  Column(
+                    children: [
+                      Text(
+                        'Stand Out and',
+                        style: TextStyle(fontSize: 36, fontWeight: FontWeight.w700),
+                        textAlign: TextAlign.center,
+                      ),
+                      Text(
+                        'Get Hired',
+                        style: TextStyle(fontSize: 36, fontWeight: FontWeight.w700,color: appPrimaryColor),
+                        textAlign: TextAlign.center,
+                      ),
+                    ],
                   ),
                   SizedBox(height: screenHeight * 0.020),
 
@@ -62,7 +71,6 @@ class _StandOutScreenState extends State<StandOutScreen> {
                     ),
                   ),
                   SizedBox(height: screenHeight * 0.020),
-
                   Container(
                     height: screenHeight * 0.08,
                     width: screenWidth * 0.70,
@@ -106,6 +114,8 @@ class _StandOutScreenState extends State<StandOutScreen> {
                       ),
                     ),
                   ),
+                  SizedBox(height: screenHeight * 0.010),
+
                 ],
               ),
             ),

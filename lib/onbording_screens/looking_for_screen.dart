@@ -54,31 +54,31 @@ class _LookingForScreenState extends State<LookingForScreen> {
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(10),
                       ),
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                        child: Row(
-                          children: [
-                            Image.asset(
-                              'assets/icons/bag_logo.png',
-                              height: 30,
-                              width: 30,
-                            ),
-                            SizedBox(width: 8),
-                            Text('Find a job',style: TextStyle(fontSize: 16,fontWeight: FontWeight.w500),),
-                            Spacer(), // Add a comma here
-                            Radio<String>(
+                      child: Row(
+                        children: [
+                          SizedBox(width: 10,),
+                          Image.asset(
+                            'assets/icons/bag_logo.png',
+                            height: 30,
+                            width: 30,
+                          ),
+                          SizedBox(width: 8),
+                          Text('Find a job',style: TextStyle(fontSize: 16,fontWeight: FontWeight.w500),),
+                          Spacer(), // Add a comma here
+                          Radio<String>(
+                              visualDensity: VisualDensity.compact,
                               value: 'Employee',
-                              groupValue: _selectedValue,
-                              activeColor: appTextColor,
-    onChanged: (String? value) {
-    if (value != null) {
-    setState(() {
-    _selectedValue = value; // Update state
-    });
-    }}
-                            ),
-                          ],
-                        ),
+                            groupValue: _selectedValue,
+                            activeColor: appTextColor,
+                          onChanged: (String? value) {
+                          if (value != null) {
+                          setState(() {
+                          _selectedValue = value; // Update state
+                          });
+                          }}
+
+                          ),
+                        ],
                       ),
                     ),
                     SizedBox(height: 10,),
@@ -88,31 +88,30 @@ class _LookingForScreenState extends State<LookingForScreen> {
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(10),
                       ),
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                        child: Row(
-                          children: [
-                            Image.asset(
-                              'assets/icons/Employee.png',
-                              height: 30,
-                              width: 30,
-                            ),
-                            SizedBox(width: 8),
-                            Text('Find an Employee',style: TextStyle(fontSize: 16,fontWeight: FontWeight.w500),),
-                            Spacer(),
-                            Radio<String>(
+                      child: Row(
+                        children: [
+                          SizedBox(width: 10,),
+                          Image.asset(
+                            'assets/icons/Employee.png',
+                            height: 30,
+                            width: 30,
+                          ),
+                          SizedBox(width: 8),
+                          Text('Find an Employee',style: TextStyle(fontSize: 16,fontWeight: FontWeight.w500),),
+                          Spacer(),
+                          Radio<String>(
+                              visualDensity: VisualDensity.compact,
                               value: 'Employer',
-                              groupValue: _selectedValue,
-                              activeColor: appTextColor,
-                                onChanged: (String? value) {
-                                  if (value != null) {
-                                    setState(() {
-                                      _selectedValue = value; // Update state
-                                    });
-                                  }}
-                            ),
-                          ],
-                        ),
+                            groupValue: _selectedValue,
+                            activeColor: appTextColor,
+                              onChanged: (String? value) {
+                                if (value != null) {
+                                  setState(() {
+                                    _selectedValue = value; // Update state
+                                  });
+                                }}
+                          ),
+                        ],
                       ),
                     ),
                     SizedBox(height: screenHeight * 0.030),
