@@ -1,41 +1,26 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:job_networking_app/profile_screens/create_profile_screen_2.dart';
+import 'package:job_networking_app/profile_screens/create_profile_screen_4.dart';
 
 import '../constants/color_constants.dart';
 import '../constants/custom_elevated_button.dart';
 
-class CreateProfileScreen_1 extends StatefulWidget {
-  const CreateProfileScreen_1({super.key});
+class CreateProfileScreen3 extends StatefulWidget {
+  const CreateProfileScreen3({super.key});
 
   @override
-  State<CreateProfileScreen_1> createState() => _CreateProfileScreen_1State();
+  State<CreateProfileScreen3> createState() => _CreateProfileScreen3State();
 }
 
-class _CreateProfileScreen_1State extends State<CreateProfileScreen_1> {
-  String _selectedGender = '';
-  String _selectedDate = '';
+class _CreateProfileScreen3State extends State<CreateProfileScreen3> {
+  String _selectedLanguage = '';
+  String _profilrVisibility ='';
 
-  Future<void> _selectDate(BuildContext context) async {
-    final DateTime? picked = await showDatePicker(
-      context: context,
-      initialDate: DateTime.now(),
-      firstDate: DateTime(1900),
-      lastDate: DateTime.now(),
-    );
-
-    if (picked != null) {
-      setState(() {
-        _selectedDate = "${picked.day}/${picked.month}/${picked.year}";
-      });
-    }
-  }
   @override
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;
     double screenWidth = screenSize.width;
     double screenHeight = screenSize.height;
-    double titleFontSize = screenWidth * 0.08;
 
     return Scaffold(
       body: SingleChildScrollView(
@@ -71,7 +56,7 @@ class _CreateProfileScreen_1State extends State<CreateProfileScreen_1> {
               ),
             ),
             const Text(
-              'Enter your Personal Information',
+              'Enter your Skills and Preferences',
               style: TextStyle(fontSize: 12, color: appTextColor2,fontWeight: FontWeight.w400),
               textAlign: TextAlign.center,
             ),
@@ -95,68 +80,32 @@ class _CreateProfileScreen_1State extends State<CreateProfileScreen_1> {
                     children: [
                       Container(
                         decoration: BoxDecoration(
+                          borderRadius: BorderRadius.only(topLeft: Radius.circular(16),bottomLeft: Radius.circular(16)),
                           color: appPrimaryColor,
-                          borderRadius: BorderRadius.circular(16),
+                        ),
+                        height: 10,
+                        width: screenWidth/3-25,
+                      ),
+                      Container(
+                        decoration: BoxDecoration(
+                          color: appPrimaryColor,
                         ),
                         height: 10,
                         width: screenWidth/3-25,
                       ),
                       Container(
                         height: 10,
-                        width: screenWidth/3-25,
-                      ),
-                      Container(
-                      height: 10,
+                        decoration: BoxDecoration(
+                          color: appPrimaryColor,
+                          borderRadius: BorderRadius.only(topRight: Radius.circular(16),bottomRight: Radius.circular(16)),
+                        ),
                         width: screenWidth/3-25,
                       ),
                     ],
                   ),
                 ),
                 SizedBox(width: 10,),
-                Text('20%')
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Stack(
-                  clipBehavior: Clip.none,
-                  children: [
-                    Container(
-                      height: screenHeight * 0.12,
-                      width: screenWidth * 0.8,
-                    ),
-                    Positioned(
-                      // top: screenHeight * 0.03,
-                      left: (screenWidth * 0.8) / 2 - screenHeight * 0.06,
-                      child: CircleAvatar(
-                        radius: screenHeight * 0.06,
-                        backgroundColor: Colors.red,
-                        backgroundImage: AssetImage('assets/temp_images/dummy_user.png'),
-                      ),
-                    ),
-                    Positioned(
-                      top: screenHeight * 0.08,
-                      left: (screenWidth * 0.8) / 2 + screenHeight * 0.03,
-                      child: GestureDetector(
-                        onTap: () {},
-                        child: Container(
-                          padding: EdgeInsets.all(4),
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: appsecondaryColor,
-                          ),
-                          child: Icon(
-                            Icons.edit,
-                            size: 20,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
+                Text('90%')
               ],
             ),
             SizedBox(height: screenHeight * 0.030),
@@ -165,15 +114,33 @@ class _CreateProfileScreen_1State extends State<CreateProfileScreen_1> {
               child: TextField(
                 cursorColor: appPrimaryColor,
                 decoration: InputDecoration(
-                    border: OutlineInputBorder(
-                      borderSide: BorderSide(color: appTextfilledColor),
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: appTextfilledColor),
-                    ),
-                    labelText: 'Full Name',
-                    labelStyle: TextStyle(color: appTextfilledColor),
-                    hintText: 'Enter your full name',
+                  border: OutlineInputBorder(
+                    borderSide: BorderSide(color: appTextfilledColor), // Set border color
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: appTextfilledColor), // Set focused border color
+                  ),
+                  labelText: 'Profile Summary',
+                  labelStyle: TextStyle(color: appTextfilledColor),
+                  hintText: 'Write a short description',
+                ),
+              ),
+            ),
+            SizedBox(height: screenHeight * 0.030),
+            SizedBox(
+              height: screenHeight * 0.08,
+              child: TextField(
+                cursorColor: appPrimaryColor,
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(
+                    borderSide: BorderSide(color: appTextfilledColor), // Set border color
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: appTextfilledColor), // Set focused border color
+                  ),
+                  labelText: 'Education',
+                  labelStyle: TextStyle(color: appTextfilledColor),
+                  hintText: 'Highest level of education',
                 ),
               ),
             ),
@@ -189,9 +156,9 @@ class _CreateProfileScreen_1State extends State<CreateProfileScreen_1> {
                   focusedBorder: OutlineInputBorder(
                     borderSide: BorderSide(color: appTextfilledColor),
                   ),
-                  labelText: 'Email',
+                  labelText: 'Certifications',
                   labelStyle: TextStyle(color: appTextfilledColor),
-                  hintText: 'Enter your email',
+                  hintText: 'Relevant certifications or training',
                 ),
               ),
             ),
@@ -207,27 +174,9 @@ class _CreateProfileScreen_1State extends State<CreateProfileScreen_1> {
                   focusedBorder: OutlineInputBorder(
                     borderSide: BorderSide(color: appTextfilledColor),
                   ),
-                  labelText: 'Phone Number',
+                  labelText: 'Skills',
                   labelStyle: TextStyle(color: appTextfilledColor),
-                  hintText: 'Enter your phone number',
-                ),
-              ),
-            ),
-            SizedBox(height: screenHeight * 0.030),
-            SizedBox(
-              height: screenHeight * 0.08,
-              child: TextField(
-                cursorColor: appPrimaryColor,
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(
-                    borderSide: BorderSide(color: appTextfilledColor),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: appTextfilledColor),
-                  ),
-                  labelText: 'Location',
-                  labelStyle: TextStyle(color: appTextfilledColor),
-                  hintText: 'Enter your city name/residential area',
+                  hintText: 'e.g., customer service',
                 ),
               ),
             ),
@@ -245,20 +194,20 @@ class _CreateProfileScreen_1State extends State<CreateProfileScreen_1> {
                           mainAxisSize: MainAxisSize.min,
                           children: [
                             ListTile(
-                              title: Text('Male'),
+                              title: Text('English'),
                               onTap: () {
                                 // Handle Male selection
                                 setState(() {
-                                  _selectedGender = 'Male';
+                                  _selectedLanguage = 'English';
                                 });
                                 Navigator.pop(context);
                               },
                             ),
                             ListTile(
-                              title: Text('Female'),
+                              title: Text('French'),
                               onTap: () {
                                 setState(() {
-                                  _selectedGender = 'Female';
+                                  _selectedLanguage = 'French';
                                 });
                                 Navigator.pop(context);
                               },
@@ -279,9 +228,9 @@ class _CreateProfileScreen_1State extends State<CreateProfileScreen_1> {
                       focusedBorder: OutlineInputBorder(
                         borderSide: BorderSide(color: appTextfilledColor),
                       ),
-                      labelText: 'Gender',
+                      labelText: 'Language',
                       labelStyle: TextStyle(color: appTextfilledColor),
-                      hintText: 'Select your gender',
+                      hintText: 'Enter Your Language',
                       suffixIcon: IconButton(
                         icon: Icon(
                           Icons.keyboard_arrow_down_rounded,
@@ -290,52 +239,80 @@ class _CreateProfileScreen_1State extends State<CreateProfileScreen_1> {
                         onPressed: () {},
                       ),
                     ),
-                    controller: TextEditingController(text: _selectedGender),
+                    controller: TextEditingController(text: _selectedLanguage),
                   ),
                 ),
               ),
             ),
             SizedBox(height: screenHeight * 0.030),
             SizedBox(
-            height: screenHeight * 0.08,
-            child: GestureDetector(
-              onTap: () {
-                _selectDate(context);
-              },
-              child: AbsorbPointer(
-                child: TextField(
-                  cursorColor: Colors.transparent,
-                  decoration: InputDecoration(
-                    border: OutlineInputBorder(
-                      borderSide: BorderSide(color: appTextfilledColor),
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: appTextfilledColor),
-                    ),
-                    labelText: 'Date of Birth',
-                    labelStyle: TextStyle(color: appTextfilledColor),
-                    hintText: 'Enter Your Date of Birth',
-                    suffixIcon: IconButton(
-                      icon: Icon(
-                        Icons.calendar_month_outlined,
-                        color: appsecondaryColor,
+              height: screenHeight * 0.08,
+              child: GestureDetector(
+                onTap: () {
+                  showModalBottomSheet(
+                    context: context,
+                    builder: (BuildContext context) {
+                      return Container(
+                        padding: EdgeInsets.all(16),
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            ListTile(
+                              title: Text('public'),
+                              onTap: () {
+                                setState(() {
+                                  _profilrVisibility = 'public';
+                                });
+                                Navigator.pop(context);
+                              },
+                            ),
+                            ListTile(
+                              title: Text('only employers'),
+                              onTap: () {
+                                setState(() {
+                                  _profilrVisibility = 'only employers';
+                                });
+                                Navigator.pop(context);
+                              },
+                            ),
+                          ],
+                        ),
+                      );
+                    },
+                  );
+                },
+                child: AbsorbPointer(
+                  child: TextField(
+                    cursorColor: Colors.transparent,
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                        borderSide: BorderSide(color: appTextfilledColor),
                       ),
-                      onPressed: () {
-                        _selectDate(context);
-                      },
+                      focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: appTextfilledColor),
+                      ),
+                      labelText: 'Profile Visibility',
+                      labelStyle: TextStyle(color: appTextfilledColor),
+                      hintText: 'e.g., public, only employers',
+                      suffixIcon: IconButton(
+                        icon: Icon(
+                          Icons.keyboard_arrow_down_rounded,
+                          color: appsecondaryColor,
+                        ),
+                        onPressed: () {},
+                      ),
                     ),
+                    controller: TextEditingController(text: _profilrVisibility),
                   ),
-                  controller: TextEditingController(text: _selectedDate),
                 ),
               ),
             ),
-          ),
             SizedBox(height: screenHeight * 0.030),
             CustomElevatedButton(onPressed: (){
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => CreateProfileScreen2(),
+                  builder: (context) => CreateProfileScreen4(),
                 ),
               );
             }, title: 'Continue'),
