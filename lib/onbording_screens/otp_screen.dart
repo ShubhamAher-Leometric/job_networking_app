@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:job_networking_app/onbording_screens/sucess_screen.dart';
+import 'package:job_networking_app/sucess_screens/sucess_screen.dart';
 import 'package:pinput/pinput.dart';
 import '../constants/color_constants.dart';
 import '../constants/custom_elevated_button.dart';

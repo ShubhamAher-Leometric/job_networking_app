@@ -114,7 +114,7 @@ class _StandOutScreenState extends State<StandOutScreen> {
                       ),
                     ),
                   ),
-                  SizedBox(height: screenHeight * 0.010),
+                  SizedBox(height: screenHeight * 0.020),
 
                 ],
               ),

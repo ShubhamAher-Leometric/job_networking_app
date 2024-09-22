@@ -4,6 +4,7 @@ import 'package:job_networking_app/constants/custom_elevated_button.dart';
 import 'package:job_networking_app/onbording_screens/forgot_password_screen.dart';
 import 'package:job_networking_app/onbording_screens/looking_for_screen.dart';
 import 'package:job_networking_app/onbording_screens/otp_screen.dart';
+import 'package:job_networking_app/onbording_screens/reset_password_screen.dart';
 import 'package:job_networking_app/onbording_screens/sign_up_screen.dart';
 
 class LoginPage extends StatefulWidget {
@@ -101,7 +102,7 @@ class _LoginPageState extends State<LoginPage> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => ForgotPasswordScreen(),
+                          builder: (context) => ResetPasswordScreen(),
                         ),
                       );
                     },

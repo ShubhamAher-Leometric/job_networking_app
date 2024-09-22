@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:job_networking_app/menu_screen.dart';
-import 'package:job_networking_app/onbording_screens/sucess_screen.dart';
 
 import '../constants/color_constants.dart';
 import '../constants/custom_elevated_button.dart';
@@ -52,6 +51,7 @@ class _TermsAndConditionsPageState extends State<TermsAndConditionsPage> {
                 color: appTextColor,
               ),
             ),
+            SizedBox(height: 10,),
             const Text(
               'Welcome to Fast aff , a platform designed to connect daily wage employees and employers. By using our platform, you agree to comply with and be bound by the following terms and conditions',
               style: TextStyle(fontSize: 12, color: appTextColor2,fontWeight: FontWeight.w400),

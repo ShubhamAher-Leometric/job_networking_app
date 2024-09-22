@@ -144,6 +144,8 @@ class _CreateProfileScreen4State extends State<CreateProfileScreen4> {
             ),
             SizedBox(height: screenHeight * 0.030),
             Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Checkbox(
               fillColor: WidgetStateProperty.resolveWith((states) {

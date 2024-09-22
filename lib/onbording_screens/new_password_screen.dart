@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:job_networking_app/onbording_screens/sucess_screen.dart';
+import 'package:job_networking_app/sucess_screens/password_sucess_screen.dart';
+import 'package:job_networking_app/sucess_screens/sucess_screen.dart';
 
 import '../constants/color_constants.dart';
 import '../constants/custom_elevated_button.dart';
@@ -123,7 +124,7 @@ class _NewPasswordScreenState extends State<NewPasswordScreen> {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => SucessScreen(),
+                  builder: (context) => PasswordSucessScreen(),
                 ),
               );
             }, title: 'Create New Password'),

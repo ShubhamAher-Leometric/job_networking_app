@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:job_networking_app/constants/color_constants.dart';
+import 'package:job_networking_app/menu_screen/home_screen.dart';
 
 class MenuScreen extends StatefulWidget {
   const MenuScreen({super.key});
@@ -15,10 +16,7 @@ class _MenuScreenState extends State<MenuScreen> {
   static const TextStyle optionStyle =
   TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Home Screen',
-      style: optionStyle,
-    ),
+    HomeScreen(),
     Text(
       'Jobs Screen',
       style: optionStyle,

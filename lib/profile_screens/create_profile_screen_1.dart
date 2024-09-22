@@ -116,6 +116,7 @@ class _CreateProfileScreen_1State extends State<CreateProfileScreen_1> {
                 Text('20%')
               ],
             ),
+            SizedBox(height: screenHeight * 0.015),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -131,14 +132,14 @@ class _CreateProfileScreen_1State extends State<CreateProfileScreen_1> {
                       // top: screenHeight * 0.03,
                       left: (screenWidth * 0.8) / 2 - screenHeight * 0.06,
                       child: CircleAvatar(
-                        radius: screenHeight * 0.06,
+                        radius: screenHeight * 0.05,
                         backgroundColor: Colors.red,
                         backgroundImage: AssetImage('assets/temp_images/dummy_user.png'),
                       ),
                     ),
                     Positioned(
-                      top: screenHeight * 0.08,
-                      left: (screenWidth * 0.8) / 2 + screenHeight * 0.03,
+                      top: screenHeight * 0.06,
+                      left: (screenWidth * 0.8) / 2 + screenHeight * 0.01,
                       child: GestureDetector(
                         onTap: () {},
                         child: Container(
@@ -149,7 +150,7 @@ class _CreateProfileScreen_1State extends State<CreateProfileScreen_1> {
                           ),
                           child: Icon(
                             Icons.edit,
-                            size: 20,
+                            size: 16,
                             color: Colors.white,
                           ),
                         ),
@@ -159,7 +160,7 @@ class _CreateProfileScreen_1State extends State<CreateProfileScreen_1> {
                 ),
               ],
             ),
-            SizedBox(height: screenHeight * 0.030),
+            SizedBox(height: screenHeight * 0.015),
             SizedBox(
               height: screenHeight * 0.08,
               child: TextField(
