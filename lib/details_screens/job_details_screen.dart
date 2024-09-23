@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:job_networking_app/details_screens/apply_now_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../constants/color_constants.dart';
 
@@ -230,32 +231,6 @@ class _JobDetailsScreenState extends State<JobDetailsScreen> with SingleTickerPr
                   reviewsSection(),
                 ],
               ),
-              SizedBox(height: 10),
-              Divider(),
-              SizedBox(height: 10),
-              Container(
-          width: screenWidth * 0.6,
-          height: screenHeight * 0.08,
-          child: ElevatedButton(
-            onPressed: (){},
-            style: ButtonStyle(
-              backgroundColor: WidgetStateProperty.all(appsecondaryColor),
-              elevation: WidgetStateProperty.all(0),
-              shape: WidgetStateProperty.all(
-                RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(6),
-                ),
-              ),
-              minimumSize: MaterialStateProperty.all(Size(double.infinity, 50)),
-              foregroundColor: MaterialStateProperty.all(Colors.white),
-            ),
-            child: Text(
-              'Apply Now',
-              style: TextStyle(color: Colors.white,fontSize: 16,fontWeight: FontWeight.w700),
-            ),
-          ),
-        ),
-              SizedBox(height: 20),
             ],
           ),
         ),
@@ -287,6 +262,9 @@ class _JobDetailsScreenState extends State<JobDetailsScreen> with SingleTickerPr
   }
 
   Widget jobDescriptionSection() {
+    Size screenSize = MediaQuery.of(context).size;
+    double screenWidth = screenSize.width;
+    double screenHeight = screenSize.height;
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20.0),
       child: Column(
@@ -445,12 +423,48 @@ class _JobDetailsScreenState extends State<JobDetailsScreen> with SingleTickerPr
               ),
             ],
           ),
+          SizedBox(height: 10),
+          Divider(),
+          SizedBox(height: 10),
+          Container(
+            width: screenWidth * 0.6,
+            height: screenHeight * 0.08,
+            child: ElevatedButton(
+              onPressed: (){
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ApplyNowScreen(),
+                  ),
+                );
+              },
+              style: ButtonStyle(
+                backgroundColor: WidgetStateProperty.all(appsecondaryColor),
+                elevation: WidgetStateProperty.all(0),
+                shape: WidgetStateProperty.all(
+                  RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(6),
+                  ),
+                ),
+                minimumSize: MaterialStateProperty.all(Size(double.infinity, 50)),
+                foregroundColor: MaterialStateProperty.all(Colors.white),
+              ),
+              child: Text(
+                'Apply Now',
+                style: TextStyle(color: Colors.white,fontSize: 16,fontWeight: FontWeight.w700),
+              ),
+            ),
+          ),
+          SizedBox(height: 20),
         ],
       ),
     );
   }
 
   Widget companyInfoSection() {
+    Size screenSize = MediaQuery.of(context).size;
+    double screenWidth = screenSize.width;
+    double screenHeight = screenSize.height;
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20.0),
       child: Column(
@@ -496,12 +510,48 @@ class _JobDetailsScreenState extends State<JobDetailsScreen> with SingleTickerPr
               ),
             ],
           ),
+          SizedBox(height: 10),
+          Divider(),
+          SizedBox(height: 10),
+          Container(
+            width: screenWidth * 0.6,
+            height: screenHeight * 0.08,
+            child: ElevatedButton(
+              onPressed: (){
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ApplyNowScreen(),
+                  ),
+                );
+              },
+              style: ButtonStyle(
+                backgroundColor: WidgetStateProperty.all(appsecondaryColor),
+                elevation: WidgetStateProperty.all(0),
+                shape: WidgetStateProperty.all(
+                  RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(6),
+                  ),
+                ),
+                minimumSize: MaterialStateProperty.all(Size(double.infinity, 50)),
+                foregroundColor: MaterialStateProperty.all(Colors.white),
+              ),
+              child: Text(
+                'Apply Now',
+                style: TextStyle(color: Colors.white,fontSize: 16,fontWeight: FontWeight.w700),
+              ),
+            ),
+          ),
+          SizedBox(height: 20),
         ],
       ),
     );
   }
 
   Widget reviewsSection() {
+    Size screenSize = MediaQuery.of(context).size;
+    double screenWidth = screenSize.width;
+    double screenHeight = screenSize.height;
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20.0),
       child: Column(
@@ -561,7 +611,40 @@ class _JobDetailsScreenState extends State<JobDetailsScreen> with SingleTickerPr
               Icon(Icons.star,size: 20,color: Colors.amber,),
               Text('4.5',style: TextStyle(color: appTextColor2,fontWeight: FontWeight.w600,fontSize: 12),)
             ],
-          )
+          ),
+          SizedBox(height: 10),
+          Divider(),
+          SizedBox(height: 10),
+          Container(
+            width: screenWidth * 0.6,
+            height: screenHeight * 0.08,
+            child: ElevatedButton(
+              onPressed: (){
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ApplyNowScreen(),
+                  ),
+                );
+              },
+              style: ButtonStyle(
+                backgroundColor: WidgetStateProperty.all(appsecondaryColor),
+                elevation: WidgetStateProperty.all(0),
+                shape: WidgetStateProperty.all(
+                  RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(6),
+                  ),
+                ),
+                minimumSize: MaterialStateProperty.all(Size(double.infinity, 50)),
+                foregroundColor: MaterialStateProperty.all(Colors.white),
+              ),
+              child: Text(
+                'Apply Now',
+                style: TextStyle(color: Colors.white,fontSize: 16,fontWeight: FontWeight.w700),
+              ),
+            ),
+          ),
+          SizedBox(height: 20),
         ],
       ),
     );

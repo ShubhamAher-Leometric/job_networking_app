@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:job_networking_app/constants/color_constants.dart';
 import 'package:job_networking_app/menu_screen/home_screen.dart';
+import 'package:job_networking_app/menu_screen/messages_screen.dart';
 
 class MenuScreen extends StatefulWidget {
   const MenuScreen({super.key});
@@ -21,10 +22,7 @@ class _MenuScreenState extends State<MenuScreen> {
       'Jobs Screen',
       style: optionStyle,
     ),
-    Text(
-      'Messages Screen',
-      style: optionStyle,
-    ),
+  MessagesScreen(),
     Text(
       'Profile Screen',
       style: optionStyle,
@@ -46,7 +44,7 @@ class _MenuScreenState extends State<MenuScreen> {
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Image.asset(
-              'assets/icons/home_filled.png', // Path to your image
+              'assets/icons/home.png', // Path to your image
               width: 24,
               height: 24,
             ),
@@ -64,7 +62,7 @@ class _MenuScreenState extends State<MenuScreen> {
               height: 24,
             ),
             activeIcon: Image.asset(
-              'assets/icons/jobs_unfilled.png', // Active icon
+              'assets/icons/jobs_filled.png', // Active icon
               width: 24,
               height: 24,
             ),
@@ -77,7 +75,7 @@ class _MenuScreenState extends State<MenuScreen> {
               height: 24,
             ),
             activeIcon: Image.asset(
-              'assets/icons/message_unfilled.png', // Active icon
+              'assets/icons/message_filled.png', // Active icon
               width: 24,
               height: 24,
             ),
@@ -90,7 +88,7 @@ class _MenuScreenState extends State<MenuScreen> {
               height: 24,
             ),
             activeIcon: Image.asset(
-              'assets/icons/profile_infilled.png', // Active icon
+              'assets/icons/profile_filled.png', // Active icon
               width: 24,
               height: 24,
             ),
