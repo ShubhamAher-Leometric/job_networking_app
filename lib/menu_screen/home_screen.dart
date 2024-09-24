@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:job_networking_app/constants/color_constants.dart';
 import 'package:job_networking_app/details_screens/job_details_screen.dart';
+import 'package:job_networking_app/menu_screen/notification_screen.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -51,7 +52,16 @@ class _HomeScreenState extends State<HomeScreen> {
                         color: appTextColor3),
                     ),
                       Spacer(),
-                      Icon(Icons.notifications_none_rounded,size: 26,),
+                      GestureDetector(
+                          onTap: (){
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => NotificationScreen(),
+                              ),
+                            );
+                          },
+                          child: Icon(Icons.notifications_none_rounded,size: 26,)),
                         Icon(Icons.filter_alt_outlined,size: 26,),
                       ],
                     ),
