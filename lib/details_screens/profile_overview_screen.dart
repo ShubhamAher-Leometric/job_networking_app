@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:job_networking_app/details_screens/edit_education_screen.dart';
+import 'package:job_networking_app/details_screens/edit_personal_information_screen.dart';
+import 'package:job_networking_app/details_screens/edit_work_history.dart';
+import 'package:job_networking_app/details_screens/resume_upload_screen.dart';
 
 import '../constants/color_constants.dart';
 
@@ -74,7 +78,16 @@ class _ProfileOverviewScreenState extends State<ProfileOverviewScreen> {
                                       Text('Personal Information',style: TextStyle(fontSize: 16,
                                           fontWeight: FontWeight.w600,color: appTextColor),),
                                       Spacer(),
-                                      Image.asset('assets/icons/edit.png',height: 20,width: 20,),
+                                      GestureDetector(
+                                          onTap: (){
+                                            Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                builder: (context) => EditPersonalInformationScreen(),
+                                              ),
+                                            );
+                                          },
+                                          child: Image.asset('assets/icons/edit.png',height: 20,width: 20,)),
                                     ],
                                   ),
                                 ),
@@ -147,7 +160,16 @@ class _ProfileOverviewScreenState extends State<ProfileOverviewScreen> {
                                       Text('Resume',style: TextStyle(fontSize: 16,
                                           fontWeight: FontWeight.w600,color: appTextColor),),
                                       Spacer(),
-                                      Image.asset('assets/icons/edit.png',height: 20,width: 20,),
+                                      GestureDetector(
+                                          onTap: (){
+                                            Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                builder: (context) => ResumeUploadScreen(),
+                                              ),
+                                            );
+                                          },
+                                          child: Image.asset('assets/icons/edit.png',height: 20,width: 20,)),
                                     ],
                                   ),
                                 ),
@@ -214,7 +236,16 @@ class _ProfileOverviewScreenState extends State<ProfileOverviewScreen> {
                                       Text('Education',style: TextStyle(fontSize: 16,
                                           fontWeight: FontWeight.w600,color: appTextColor),),
                                       Spacer(),
-                                      Image.asset('assets/icons/edit.png',height: 20,width: 20,),
+                                      GestureDetector(
+                                          onTap: (){
+                                            Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                builder: (context) => EditEducationScreen(),
+                                              ),
+                                            );
+                                          },
+                                          child: Image.asset('assets/icons/edit.png',height: 20,width: 20,)),
                                     ],
                                   ),
                                 ),
@@ -287,7 +318,16 @@ class _ProfileOverviewScreenState extends State<ProfileOverviewScreen> {
                                       Text('Work history',style: TextStyle(fontSize: 16,
                                           fontWeight: FontWeight.w600,color: appTextColor),),
                                       Spacer(),
-                                      Image.asset('assets/icons/edit.png',height: 20,width: 20,),
+                                      GestureDetector(
+                                          onTap: (){
+                                            Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                builder: (context) => EditWorkHistory(),
+                                              ),
+                                            );
+                                          },
+                                          child: Image.asset('assets/icons/edit.png',height: 20,width: 20,)),
                                     ],
                                   ),
                                 ),
