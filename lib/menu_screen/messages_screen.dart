@@ -31,7 +31,6 @@ class _MessagesScreenState extends State<MessagesScreen> {
                 height:screenHeight * 0.10,
                 child: GestureDetector(
                   onTap: (){
-                    Navigator.pop(context);
                   },
                   child: Row(
                     children: [
@@ -80,7 +79,7 @@ class _MessagesScreenState extends State<MessagesScreen> {
                   ],
                 ),
               ),
-SizedBox(height: 10,),
+              SizedBox(height: 10,),
               GestureDetector(
                 onTap: (){
                   Navigator.push(

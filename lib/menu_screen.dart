@@ -3,7 +3,9 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:job_networking_app/constants/color_constants.dart';
 import 'package:job_networking_app/menu_screen/home_screen.dart';
+import 'package:job_networking_app/menu_screen/job_screen.dart';
 import 'package:job_networking_app/menu_screen/messages_screen.dart';
+import 'package:job_networking_app/menu_screen/profile_screen.dart';
 
 class MenuScreen extends StatefulWidget {
   const MenuScreen({super.key});
@@ -18,15 +20,9 @@ class _MenuScreenState extends State<MenuScreen> {
   TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
     HomeScreen(),
-    Text(
-      'Jobs Screen',
-      style: optionStyle,
-    ),
-  MessagesScreen(),
-    Text(
-      'Profile Screen',
-      style: optionStyle,
-    ),
+    JobScreen(),
+    MessagesScreen(),
+    ProfileScreen(),
   ];
 
   void _onItemTapped(int index) {
