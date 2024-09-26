@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:job_networking_app/profile_screens/create_profile_screen_3.dart';
+import 'package:job_networking_app/profile_screens/create_profile_screen_4.dart';
 
 import '../constants/color_constants.dart';
 import '../constants/custom_elevated_button.dart';
@@ -130,9 +131,9 @@ class _CreateProfileScreen2State extends State<CreateProfileScreen2> {
                   focusedBorder: OutlineInputBorder(
                     borderSide: BorderSide(color: appTextfilledColor), // Set focused border color
                   ),
-                  labelText: 'Job Type',
+                  labelText: 'Profile Summary',
                   labelStyle: TextStyle(color: appTextfilledColor),
-                  hintText: 'e.g., Part-time, Daily wages, Hourly',
+                  hintText: 'Write a short description',
                 ),
               ),
             ),
@@ -166,44 +167,9 @@ class _CreateProfileScreen2State extends State<CreateProfileScreen2> {
                   focusedBorder: OutlineInputBorder(
                     borderSide: BorderSide(color: appTextfilledColor),
                   ),
-                  labelText: 'Salary Expetations',
+                  labelText: 'Education',
                   labelStyle: TextStyle(color: appTextfilledColor),
-                  hintText: 'Enter your salary expetations',
-                ),
-              ),
-            ),
-            SizedBox(height: screenHeight * 0.030),
-            SizedBox(
-              height: screenHeight * 0.08,
-              child: GestureDetector(
-                onTap: () {
-                  _selectDate(context); // Open the date picker when tapped
-                },
-                child: AbsorbPointer( // Prevents the default focus behavior of TextField
-                  child: TextField(
-                    cursorColor: Colors.transparent,
-                    decoration: InputDecoration(
-                      border: OutlineInputBorder(
-                        borderSide: BorderSide(color: appTextfilledColor),
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: appTextfilledColor),
-                      ),
-                      labelText: 'Availability',
-                      labelStyle: TextStyle(color: appTextfilledColor),
-                      hintText: 'Set available days and times',
-                      suffixIcon: IconButton(
-                        icon: Icon(
-                          Icons.calendar_month_outlined,
-                          color: appsecondaryColor,
-                        ),
-                        onPressed: () {
-                          _selectDate(context);
-                        },
-                      ),
-                    ),
-                    controller: TextEditingController(text: _selectedDate),
-                  ),
+                  hintText: 'Highest level of education',
                 ),
               ),
             ),
@@ -219,9 +185,61 @@ class _CreateProfileScreen2State extends State<CreateProfileScreen2> {
                   focusedBorder: OutlineInputBorder(
                     borderSide: BorderSide(color: appTextfilledColor),
                   ),
-                  labelText: 'Preferred Work Hours',
+                  labelText: 'Certifications',
                   labelStyle: TextStyle(color: appTextfilledColor),
-                  hintText: 'Morning, afternoon, evening, or night shifts',
+                  hintText: 'Relevant certifications or training',
+                ),
+              ),
+            ),
+            // SizedBox(
+            //   height: screenHeight * 0.08,
+            //   child: GestureDetector(
+            //     // onTap: () {
+            //     //   _selectDate(context); // Open the date picker when tapped
+            //     // },
+            //     child: AbsorbPointer( // Prevents the default focus behavior of TextField
+            //       child: TextField(
+            //         cursorColor: Colors.transparent,
+            //         decoration: InputDecoration(
+            //           border: OutlineInputBorder(
+            //             borderSide: BorderSide(color: appTextfilledColor),
+            //           ),
+            //           focusedBorder: OutlineInputBorder(
+            //             borderSide: BorderSide(color: appTextfilledColor),
+            //           ),
+            //           labelText: 'Certifications',
+            //           labelStyle: TextStyle(color: appTextfilledColor),
+            //           hintText: 'Relevant certifications or training',
+            //           // suffixIcon: IconButton(
+            //           //   icon: Icon(
+            //           //     Icons.calendar_month_outlined,
+            //           //     color: appsecondaryColor,
+            //           //   ),
+            //           //   // onPressed: () {
+            //           //   //   _selectDate(context);
+            //           //   // },
+            //           // ),
+            //         ),
+            //         // controller: TextEditingController(text: _selectedDate),
+            //       ),
+            //     ),
+            //   ),
+            // ),
+            SizedBox(height: screenHeight * 0.030),
+            SizedBox(
+              height: screenHeight * 0.08,
+              child: TextField(
+                cursorColor: appPrimaryColor,
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(
+                    borderSide: BorderSide(color: appTextfilledColor),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: appTextfilledColor),
+                  ),
+                  labelText: 'Language',
+                  labelStyle: TextStyle(color: appTextfilledColor),
+                  hintText: 'Enter Your Language',
                 ),
               ),
             ),
@@ -230,7 +248,7 @@ class _CreateProfileScreen2State extends State<CreateProfileScreen2> {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => CreateProfileScreen3(),
+                  builder: (context) => CreateProfileScreen4(),
                 ),
               );
             }, title: 'Continue'),

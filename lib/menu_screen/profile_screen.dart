@@ -113,7 +113,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             Container(
           decoration: BoxDecoration(
     borderRadius: BorderRadius.circular(15),
-    color: appTextColor2.withOpacity(0.1),
+    color: appcardColor,
   ),
           child: Padding(
     padding: const EdgeInsets.all(10.0),
@@ -141,7 +141,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(15),
-                color: appTextColor2.withOpacity(0.1),
+                color: appcardColor,
               ),
               child: Padding(
                 padding: const EdgeInsets.all(10.0),
@@ -158,7 +158,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(15),
-                color: appTextColor2.withOpacity(0.1),
+                color: appcardColor,
               ),
               child: Padding(
                 padding: const EdgeInsets.all(10.0),
@@ -175,7 +175,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(15),
-                color: appTextColor2.withOpacity(0.1),
+                color: appcardColor,
               ),
               child: Padding(
                 padding: const EdgeInsets.all(10.0),

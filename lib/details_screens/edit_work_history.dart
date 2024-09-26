@@ -135,7 +135,7 @@ class _EditWorkHistoryState extends State<EditWorkHistory> {
                   ),
                 ),
               ),
-              Spacer(),
+              SizedBox(height: screenHeight * 0.10),
               CustomElevatedButton(onPressed: (){
                 // Navigator.push(
                 //   context,

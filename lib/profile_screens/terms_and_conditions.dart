@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:job_networking_app/menu_screen.dart';
+import 'package:job_networking_app/sucess_screens/profile_scucess_screen.dart';
 
 import '../constants/color_constants.dart';
 import '../constants/custom_elevated_button.dart';
@@ -208,7 +209,7 @@ class _TermsAndConditionsPageState extends State<TermsAndConditionsPage> {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => MenuScreen(),
+                  builder: (context) => ProfileScucessScreen(),
                 ),
               );
             }, title: 'Create Profile'),

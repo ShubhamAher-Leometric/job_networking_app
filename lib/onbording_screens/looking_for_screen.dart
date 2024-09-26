@@ -35,7 +35,9 @@ class _LookingForScreenState extends State<LookingForScreen> {
                 child: Column(
                   children: [
                     Image.asset(
-                      'assets/icons/main_logo.png',
+                      'assets/icons/main_logo2.png',
+                      height: 200,
+                      width: 200,
                     ),
                     Text(
                       'Select Whether you’re seeking employment opportunities or your organization requires talented individuals.',

@@ -43,7 +43,7 @@ class _ChatScreenState extends State<ChatScreen> {
                         Spacer(),
                         Text(
                             'Jens Kidman',
-                            style: const TextStyle(fontWeight: FontWeight.w600,fontSize: 16)
+                            style: const TextStyle(fontWeight: FontWeight.w400,fontSize: 16)
                         ),
                         Spacer(),
                         GestureDetector(
@@ -66,7 +66,7 @@ class _ChatScreenState extends State<ChatScreen> {
                   height: 20,
                   width: 80,
                   decoration: BoxDecoration(
-                    color: appTextColor2.withOpacity(0.1),
+                    color: appchatColor1,
                     borderRadius: BorderRadius.circular(10),
                     border: Border.all(color: appTextColor2)
                   ),
@@ -87,12 +87,12 @@ class _ChatScreenState extends State<ChatScreen> {
                     Container(
                       height: 40,
                       decoration: BoxDecoration(
-                        color: appTextColor2.withOpacity(0.1),
+                        color: appchatColor1,
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Center(child: Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                        child: Text('Hello... do you ?',style: TextStyle(fontWeight: FontWeight.w600,fontSize: 16,color: appTextColor),),
+                        child: Text('Hello... do you ?',style: TextStyle(fontWeight: FontWeight.w400,fontSize: 16,color: appTextColor),),
                       )),
                     ),
                   ],
@@ -105,12 +105,12 @@ class _ChatScreenState extends State<ChatScreen> {
                     Container(
                       height: 40,
                       decoration: BoxDecoration(
-                          color: appsecondaryColor,
+                          color: appchatColor2,
                           borderRadius: BorderRadius.circular(10)
                       ),
                       child: Center(child: Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                        child: Text('I am Good Jens',style: TextStyle(fontWeight: FontWeight.w600,fontSize: 16,color: appbackgroundColor),),
+                        child: Text('I am Good Jens',style: TextStyle(fontWeight: FontWeight.w400,fontSize: 16,color: appsecondaryColor),),
                       )),
                     ),
                     SizedBox(width: 10,),
@@ -127,12 +127,12 @@ class _ChatScreenState extends State<ChatScreen> {
                     Container(
                       height: 40,
                       decoration: BoxDecoration(
-                        color: appTextColor2.withOpacity(0.1),
+                        color: appchatColor1,
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Center(child: Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                        child: Text('I am looking for an opportunity',style: TextStyle(fontWeight: FontWeight.w600,fontSize: 16,color: appTextColor),),
+                        child: Text('I am looking for an opportunity',style: TextStyle(fontWeight: FontWeight.w400,fontSize: 16,color: appTextColor),),
                       )),
                     ),
                   ],
@@ -145,12 +145,12 @@ class _ChatScreenState extends State<ChatScreen> {
                     Container(
                       height: 40,
                       decoration: BoxDecoration(
-                          color: appsecondaryColor,
+                          color: appchatColor2,
                           borderRadius: BorderRadius.circular(10)
                       ),
                       child: Center(child: Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                        child: Text('Ok, Noted',style: TextStyle(fontWeight: FontWeight.w600,fontSize: 16,color: appbackgroundColor),),
+                        child: Text('Ok, Noted',style: TextStyle(fontWeight: FontWeight.w400,fontSize: 16,color: appsecondaryColor),),
                       )),
                     ),
                     SizedBox(width: 10,),
@@ -168,12 +168,12 @@ class _ChatScreenState extends State<ChatScreen> {
                     Container(
                       height: 40,
                       decoration: BoxDecoration(
-                        color: appTextColor2.withOpacity(0.1),
+                        color: appchatColor1,
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Center(child: Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                        child: Text('Will you provide any reference',style: TextStyle(fontWeight: FontWeight.w600,fontSize: 16,color: appTextColor),),
+                        child: Text('Will you provide any reference',style: TextStyle(fontWeight: FontWeight.w400,fontSize: 16,color: appTextColor),),
                       )),
                     ),
                   ],
@@ -187,12 +187,12 @@ class _ChatScreenState extends State<ChatScreen> {
                     Container(
                       height: 40,
                       decoration: BoxDecoration(
-                          color: appsecondaryColor,
+                          color: appchatColor2,
                           borderRadius: BorderRadius.circular(10)
                       ),
                       child: Center(child: Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                        child: Text('Yes, Sure Why not.',style: TextStyle(fontWeight: FontWeight.w600,fontSize: 16,color: appbackgroundColor),),
+                        child: Text('Yes, Sure Why not.',style: TextStyle(fontWeight: FontWeight.w400,fontSize: 16,color: appsecondaryColor),),
                       )),
                     ),
                     SizedBox(width: 10,),
@@ -209,12 +209,12 @@ class _ChatScreenState extends State<ChatScreen> {
                     Container(
                       height: 40,
                       decoration: BoxDecoration(
-                        color: appTextColor2.withOpacity(0.1),
+                        color: appchatColor1,
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Center(child: Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                        child: Text('Thank you 🤘',style: TextStyle(fontWeight: FontWeight.w600,fontSize: 16,color: appTextColor),),
+                        child: Text('Thank you 🤘',style: TextStyle(fontWeight: FontWeight.w400,fontSize: 16,color: appTextColor),),
                       )),
                     ),
                   ],
@@ -227,12 +227,12 @@ class _ChatScreenState extends State<ChatScreen> {
                     Container(
                       height: 40,
                       decoration: BoxDecoration(
-                          color: appsecondaryColor,
+                          color: appchatColor2,
                           borderRadius: BorderRadius.circular(10)
                       ),
                       child: Center(child: Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                        child: Text('Please Don’t Mention.',style: TextStyle(fontWeight: FontWeight.w600,fontSize: 16,color: appbackgroundColor),),
+                        child: Text('Please Don’t Mention.',style: TextStyle(fontWeight: FontWeight.w400,fontSize: 16,color: appsecondaryColor),),
                       )),
                     ),
                     SizedBox(width: 10,),
@@ -278,7 +278,7 @@ class _ChatScreenState extends State<ChatScreen> {
                     Icon(Icons.send_rounded,color: appTextColor,)
                   ],
                 ),
-
+                SizedBox(height: 10,),
               ],
             ),
           ),

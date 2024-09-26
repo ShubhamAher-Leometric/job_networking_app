@@ -196,17 +196,221 @@ class _NotificationScreenState extends State<NotificationScreen>  with SingleTic
     Size screenSize = MediaQuery.of(context).size;
     double screenWidth = screenSize.width;
     double screenHeight = screenSize.height;
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20.0),
-      child: Column(
-        children: [
-          Row(
+    return Column(
+      children: [
+        Row(
+          children: [
+            Text('Today (5)',style: TextStyle(fontWeight: FontWeight.w700,fontSize: 16,color: appTextColor),),
+          ],
+        ),
+        SizedBox(height: 10,),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20.0),
+          child: Column(
             children: [
-              Text('Today (5)',style: TextStyle(fontWeight: FontWeight.w700,fontSize: 16,color: appTextColor),),
+              Container(
+                decoration: BoxDecoration(
+                ),
+                child: Column(
+                  children: [
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Icon(Icons.circle_rounded,size: 10,),
+                        Image.asset('assets/icons/notfication_list.png',height: 50,width: 50,),
+                        SizedBox(width: 10,),
+                        Expanded(child: Text('A recruiter has recently shown interest in your profile',
+                            style:TextStyle(fontWeight: FontWeight.w400,fontSize: 14,color: appTextColor)))
+                      ],
+                    ),
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        SizedBox(width: 70,),
+                        Expanded(child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text('Profile Performance',
+                                style:TextStyle(fontWeight: FontWeight.w400,fontSize: 10,color: appTextColor2)),
+                            Text('12h ago',
+                                style:TextStyle(fontWeight: FontWeight.w400,fontSize: 10,color: appTextColor2)),
+                          ],
+                        ))
+                      ],
+                    )
+                  ],
+                ),
+              ),
             ],
           ),
-        ],
-      ),
+        ),
+        Divider(),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20.0),
+          child: Column(
+            children: [
+              Container(
+                decoration: BoxDecoration(
+                ),
+                child: Column(
+                  children: [
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        SizedBox(width: 10,),
+                        Image.asset('assets/icons/notfication_list.png',height: 50,width: 50,),
+                        SizedBox(width: 10,),
+                        Expanded(child: Text('A recruiter has recently shown interest in your profile',
+                            style:TextStyle(fontWeight: FontWeight.w400,fontSize: 14,color: appTextColor)))
+                      ],
+                    ),
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        SizedBox(width: 70,),
+                        Expanded(child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text('Profile Performance',
+                                style:TextStyle(fontWeight: FontWeight.w400,fontSize: 10,color: appTextColor2)),
+                            Text('12h ago',
+                                style:TextStyle(fontWeight: FontWeight.w400,fontSize: 10,color: appTextColor2)),
+                          ],
+                        ))
+                      ],
+                    )
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+        Divider(),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20.0),
+          child: Column(
+            children: [
+              Container(
+                decoration: BoxDecoration(
+                ),
+                child: Column(
+                  children: [
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Icon(Icons.circle_rounded,size: 10,),
+                        Image.asset('assets/icons/notfication_list.png',height: 50,width: 50,),
+                        SizedBox(width: 10,),
+                        Expanded(child: Text('A recruiter has recently shown interest in your profile',
+                            style:TextStyle(fontWeight: FontWeight.w400,fontSize: 14,color: appTextColor)))
+                      ],
+                    ),
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        SizedBox(width: 70,),
+                        Expanded(child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text('Profile Performance',
+                                style:TextStyle(fontWeight: FontWeight.w400,fontSize: 10,color: appTextColor2)),
+                            Text('12h ago',
+                                style:TextStyle(fontWeight: FontWeight.w400,fontSize: 10,color: appTextColor2)),
+                          ],
+                        ))
+                      ],
+                    )
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+        SizedBox(height: 10,),
+        Row(
+          children: [
+            Text('Yesterday',style: TextStyle(fontWeight: FontWeight.w700,fontSize: 16,color: appTextColor),),
+          ],
+        ),
+        SizedBox(height: 10,),
+        Divider(),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20.0),
+          child: Column(
+            children: [
+              Container(
+                decoration: BoxDecoration(
+                ),
+                child: Column(
+                  children: [
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Icon(Icons.circle_rounded,size: 10,),
+                        Image.asset('assets/icons/notfication_list.png',height: 50,width: 50,),
+                        SizedBox(width: 10,),
+                        Expanded(child: Text('Your job application for Retail Assistant was viewed by ABC Interprises',
+                            style:TextStyle(fontWeight: FontWeight.w400,fontSize: 14,color: appTextColor)))
+                      ],
+                    ),
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        SizedBox(width: 70,),
+                        Expanded(child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text('Application History',
+                                style:TextStyle(fontWeight: FontWeight.w400,fontSize: 10,color: appTextColor2)),
+                            Text('12h ago',
+                                style:TextStyle(fontWeight: FontWeight.w400,fontSize: 10,color: appTextColor2)),
+                          ],
+                        ))
+                      ],
+                    )
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+        Divider(),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20.0),
+          child: Column(
+            children: [
+              Container(
+                decoration: BoxDecoration(
+                ),
+                child: Column(
+                  children: [
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Icon(Icons.circle_rounded,size: 10,),
+                        Image.asset('assets/icons/notfication_list.png',height: 50,width: 50,),
+                        SizedBox(width: 10,),
+                        Expanded(child: Text('A recruiter has recently shown interest in your profile',
+                            style:TextStyle(fontWeight: FontWeight.w400,fontSize: 14,color: appTextColor)))
+                      ],
+                    ),
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        SizedBox(width: 70,),
+                        Expanded(child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text('Profile Performance',
+                                style:TextStyle(fontWeight: FontWeight.w400,fontSize: 10,color: appTextColor2)),
+                            Text('12h ago',
+                                style:TextStyle(fontWeight: FontWeight.w400,fontSize: 10,color: appTextColor2)),
+                          ],
+                        ))
+                      ],
+                    )
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      ],
     );
   }
 
@@ -214,17 +418,221 @@ class _NotificationScreenState extends State<NotificationScreen>  with SingleTic
     Size screenSize = MediaQuery.of(context).size;
     double screenWidth = screenSize.width;
     double screenHeight = screenSize.height;
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20.0),
-      child: Column(
-        children: [
-          Row(
+    return Column(
+      children: [
+        Row(
+          children: [
+            Text('Today (5)',style: TextStyle(fontWeight: FontWeight.w700,fontSize: 16,color: appTextColor),),
+          ],
+        ),
+        SizedBox(height: 10,),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20.0),
+          child: Column(
             children: [
-              Text('Today (12)',style: TextStyle(fontWeight: FontWeight.w700,fontSize: 16,color: appTextColor),),
+              Container(
+                decoration: BoxDecoration(
+                ),
+                child: Column(
+                  children: [
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Icon(Icons.circle_rounded,size: 10,),
+                        Image.asset('assets/icons/notfication_list.png',height: 50,width: 50,),
+                        SizedBox(width: 10,),
+                        Expanded(child: Text('A recruiter has recently shown interest in your profile',
+                            style:TextStyle(fontWeight: FontWeight.w400,fontSize: 14,color: appTextColor)))
+                      ],
+                    ),
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        SizedBox(width: 70,),
+                        Expanded(child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text('Profile Performance',
+                                style:TextStyle(fontWeight: FontWeight.w400,fontSize: 10,color: appTextColor2)),
+                            Text('12h ago',
+                                style:TextStyle(fontWeight: FontWeight.w400,fontSize: 10,color: appTextColor2)),
+                          ],
+                        ))
+                      ],
+                    )
+                  ],
+                ),
+              ),
             ],
           ),
-        ],
-      ),
+        ),
+        Divider(),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20.0),
+          child: Column(
+            children: [
+              Container(
+                decoration: BoxDecoration(
+                ),
+                child: Column(
+                  children: [
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        SizedBox(width: 10,),
+                        Image.asset('assets/icons/notfication_list.png',height: 50,width: 50,),
+                        SizedBox(width: 10,),
+                        Expanded(child: Text('A recruiter has recently shown interest in your profile',
+                            style:TextStyle(fontWeight: FontWeight.w400,fontSize: 14,color: appTextColor)))
+                      ],
+                    ),
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        SizedBox(width: 70,),
+                        Expanded(child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text('Profile Performance',
+                                style:TextStyle(fontWeight: FontWeight.w400,fontSize: 10,color: appTextColor2)),
+                            Text('12h ago',
+                                style:TextStyle(fontWeight: FontWeight.w400,fontSize: 10,color: appTextColor2)),
+                          ],
+                        ))
+                      ],
+                    )
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+        Divider(),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20.0),
+          child: Column(
+            children: [
+              Container(
+                decoration: BoxDecoration(
+                ),
+                child: Column(
+                  children: [
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Icon(Icons.circle_rounded,size: 10,),
+                        Image.asset('assets/icons/notfication_list.png',height: 50,width: 50,),
+                        SizedBox(width: 10,),
+                        Expanded(child: Text('A recruiter has recently shown interest in your profile',
+                            style:TextStyle(fontWeight: FontWeight.w400,fontSize: 14,color: appTextColor)))
+                      ],
+                    ),
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        SizedBox(width: 70,),
+                        Expanded(child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text('Profile Performance',
+                                style:TextStyle(fontWeight: FontWeight.w400,fontSize: 10,color: appTextColor2)),
+                            Text('12h ago',
+                                style:TextStyle(fontWeight: FontWeight.w400,fontSize: 10,color: appTextColor2)),
+                          ],
+                        ))
+                      ],
+                    )
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+        SizedBox(height: 10,),
+        Row(
+          children: [
+            Text('Yesterday',style: TextStyle(fontWeight: FontWeight.w700,fontSize: 16,color: appTextColor),),
+          ],
+        ),
+        SizedBox(height: 10,),
+        Divider(),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20.0),
+          child: Column(
+            children: [
+              Container(
+                decoration: BoxDecoration(
+                ),
+                child: Column(
+                  children: [
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Icon(Icons.circle_rounded,size: 10,),
+                        Image.asset('assets/icons/notfication_list.png',height: 50,width: 50,),
+                        SizedBox(width: 10,),
+                        Expanded(child: Text('Your job application for Retail Assistant was viewed by ABC Interprises',
+                            style:TextStyle(fontWeight: FontWeight.w400,fontSize: 14,color: appTextColor)))
+                      ],
+                    ),
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        SizedBox(width: 70,),
+                        Expanded(child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text('Application History',
+                                style:TextStyle(fontWeight: FontWeight.w400,fontSize: 10,color: appTextColor2)),
+                            Text('12h ago',
+                                style:TextStyle(fontWeight: FontWeight.w400,fontSize: 10,color: appTextColor2)),
+                          ],
+                        ))
+                      ],
+                    )
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+        Divider(),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20.0),
+          child: Column(
+            children: [
+              Container(
+                decoration: BoxDecoration(
+                ),
+                child: Column(
+                  children: [
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Icon(Icons.circle_rounded,size: 10,),
+                        Image.asset('assets/icons/notfication_list.png',height: 50,width: 50,),
+                        SizedBox(width: 10,),
+                        Expanded(child: Text('A recruiter has recently shown interest in your profile',
+                            style:TextStyle(fontWeight: FontWeight.w400,fontSize: 14,color: appTextColor)))
+                      ],
+                    ),
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        SizedBox(width: 70,),
+                        Expanded(child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text('Profile Performance',
+                                style:TextStyle(fontWeight: FontWeight.w400,fontSize: 10,color: appTextColor2)),
+                            Text('12h ago',
+                                style:TextStyle(fontWeight: FontWeight.w400,fontSize: 10,color: appTextColor2)),
+                          ],
+                        ))
+                      ],
+                    )
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      ],
     );
   }
 
@@ -232,17 +640,221 @@ class _NotificationScreenState extends State<NotificationScreen>  with SingleTic
     Size screenSize = MediaQuery.of(context).size;
     double screenWidth = screenSize.width;
     double screenHeight = screenSize.height;
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20.0),
-      child: Column(
-        children: [
-          Row(
+    return Column(
+      children: [
+        Row(
+          children: [
+            Text('Today (5)',style: TextStyle(fontWeight: FontWeight.w700,fontSize: 16,color: appTextColor),),
+          ],
+        ),
+        SizedBox(height: 10,),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20.0),
+          child: Column(
             children: [
-              Text('Today (35)',style: TextStyle(fontWeight: FontWeight.w700,fontSize: 16,color: appTextColor),),
+              Container(
+                decoration: BoxDecoration(
+                ),
+                child: Column(
+                  children: [
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Icon(Icons.circle_rounded,size: 10,),
+                        Image.asset('assets/icons/notfication_list.png',height: 50,width: 50,),
+                        SizedBox(width: 10,),
+                        Expanded(child: Text('A recruiter has recently shown interest in your profile',
+                            style:TextStyle(fontWeight: FontWeight.w400,fontSize: 14,color: appTextColor)))
+                      ],
+                    ),
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        SizedBox(width: 70,),
+                        Expanded(child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text('Profile Performance',
+                                style:TextStyle(fontWeight: FontWeight.w400,fontSize: 10,color: appTextColor2)),
+                            Text('12h ago',
+                                style:TextStyle(fontWeight: FontWeight.w400,fontSize: 10,color: appTextColor2)),
+                          ],
+                        ))
+                      ],
+                    )
+                  ],
+                ),
+              ),
             ],
           ),
-        ],
-      ),
+        ),
+        Divider(),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20.0),
+          child: Column(
+            children: [
+              Container(
+                decoration: BoxDecoration(
+                ),
+                child: Column(
+                  children: [
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        SizedBox(width: 10,),
+                        Image.asset('assets/icons/notfication_list.png',height: 50,width: 50,),
+                        SizedBox(width: 10,),
+                        Expanded(child: Text('A recruiter has recently shown interest in your profile',
+                            style:TextStyle(fontWeight: FontWeight.w400,fontSize: 14,color: appTextColor)))
+                      ],
+                    ),
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        SizedBox(width: 70,),
+                        Expanded(child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text('Profile Performance',
+                                style:TextStyle(fontWeight: FontWeight.w400,fontSize: 10,color: appTextColor2)),
+                            Text('12h ago',
+                                style:TextStyle(fontWeight: FontWeight.w400,fontSize: 10,color: appTextColor2)),
+                          ],
+                        ))
+                      ],
+                    )
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+        Divider(),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20.0),
+          child: Column(
+            children: [
+              Container(
+                decoration: BoxDecoration(
+                ),
+                child: Column(
+                  children: [
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Icon(Icons.circle_rounded,size: 10,),
+                        Image.asset('assets/icons/notfication_list.png',height: 50,width: 50,),
+                        SizedBox(width: 10,),
+                        Expanded(child: Text('A recruiter has recently shown interest in your profile',
+                            style:TextStyle(fontWeight: FontWeight.w400,fontSize: 14,color: appTextColor)))
+                      ],
+                    ),
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        SizedBox(width: 70,),
+                        Expanded(child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text('Profile Performance',
+                                style:TextStyle(fontWeight: FontWeight.w400,fontSize: 10,color: appTextColor2)),
+                            Text('12h ago',
+                                style:TextStyle(fontWeight: FontWeight.w400,fontSize: 10,color: appTextColor2)),
+                          ],
+                        ))
+                      ],
+                    )
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+        SizedBox(height: 10,),
+        Row(
+          children: [
+            Text('Yesterday',style: TextStyle(fontWeight: FontWeight.w700,fontSize: 16,color: appTextColor),),
+          ],
+        ),
+        SizedBox(height: 10,),
+        Divider(),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20.0),
+          child: Column(
+            children: [
+              Container(
+                decoration: BoxDecoration(
+                ),
+                child: Column(
+                  children: [
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Icon(Icons.circle_rounded,size: 10,),
+                        Image.asset('assets/icons/notfication_list.png',height: 50,width: 50,),
+                        SizedBox(width: 10,),
+                        Expanded(child: Text('Your job application for Retail Assistant was viewed by ABC Interprises',
+                            style:TextStyle(fontWeight: FontWeight.w400,fontSize: 14,color: appTextColor)))
+                      ],
+                    ),
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        SizedBox(width: 70,),
+                        Expanded(child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text('Application History',
+                                style:TextStyle(fontWeight: FontWeight.w400,fontSize: 10,color: appTextColor2)),
+                            Text('12h ago',
+                                style:TextStyle(fontWeight: FontWeight.w400,fontSize: 10,color: appTextColor2)),
+                          ],
+                        ))
+                      ],
+                    )
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+        Divider(),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20.0),
+          child: Column(
+            children: [
+              Container(
+                decoration: BoxDecoration(
+                ),
+                child: Column(
+                  children: [
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Icon(Icons.circle_rounded,size: 10,),
+                        Image.asset('assets/icons/notfication_list.png',height: 50,width: 50,),
+                        SizedBox(width: 10,),
+                        Expanded(child: Text('A recruiter has recently shown interest in your profile',
+                            style:TextStyle(fontWeight: FontWeight.w400,fontSize: 14,color: appTextColor)))
+                      ],
+                    ),
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        SizedBox(width: 70,),
+                        Expanded(child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text('Profile Performance',
+                                style:TextStyle(fontWeight: FontWeight.w400,fontSize: 10,color: appTextColor2)),
+                            Text('12h ago',
+                                style:TextStyle(fontWeight: FontWeight.w400,fontSize: 10,color: appTextColor2)),
+                          ],
+                        ))
+                      ],
+                    )
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      ],
     );
   }
 }

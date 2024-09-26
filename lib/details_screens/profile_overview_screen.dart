@@ -56,7 +56,7 @@ class _ProfileOverviewScreenState extends State<ProfileOverviewScreen> {
                   bottomLeft: Radius.circular(15.0),
                 ),
                 child: Container(
-                  color: appTextColor2.withOpacity(0.1),
+                  color: appcardColor,
                   width: double.infinity,
                   // height: MediaQuery.of(context).size.height / 3,
                   child: Padding(
@@ -138,7 +138,7 @@ class _ProfileOverviewScreenState extends State<ProfileOverviewScreen> {
                   bottomLeft: Radius.circular(15.0),
                 ),
                 child: Container(
-                  color: appTextColor2.withOpacity(0.1),
+                  color: appcardColor,
                   width: double.infinity,
                   // height: MediaQuery.of(context).size.height / 3,
                   child: Padding(
@@ -214,7 +214,7 @@ class _ProfileOverviewScreenState extends State<ProfileOverviewScreen> {
                   bottomLeft: Radius.circular(15.0),
                 ),
                 child: Container(
-                  color: appTextColor2.withOpacity(0.1),
+                  color: appcardColor,
                   width: double.infinity,
                   // height: MediaQuery.of(context).size.height / 3,
                   child: Padding(
@@ -296,7 +296,7 @@ class _ProfileOverviewScreenState extends State<ProfileOverviewScreen> {
                   bottomLeft: Radius.circular(15.0),
                 ),
                 child: Container(
-                  color: appTextColor2.withOpacity(0.1),
+                  color: appcardColor,
                   width: double.infinity,
                   // height: MediaQuery.of(context).size.height / 3,
                   child: Padding(

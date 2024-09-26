@@ -68,7 +68,7 @@ class _JobScreenState extends State<JobScreen> with SingleTickerProviderStateMix
               ),
               Container(
                 decoration: BoxDecoration(
-                    color: appTextColor2.withOpacity(0.1),
+                    color: appcardColor,
                     borderRadius: BorderRadius.circular(15)
                 ),
                 child: Row(
@@ -230,7 +230,7 @@ class _JobScreenState extends State<JobScreen> with SingleTickerProviderStateMix
             bottomLeft: Radius.circular(30.0),
           ),
           child: Container(
-            color: appTextColor2.withOpacity(0.1),
+            color: appcardColor,
             width: double.infinity,
             // height: MediaQuery.of(context).size.height / 3,
             child: Padding(
@@ -368,7 +368,7 @@ class _JobScreenState extends State<JobScreen> with SingleTickerProviderStateMix
             bottomLeft: Radius.circular(30.0),
           ),
           child: Container(
-            color: appTextColor2.withOpacity(0.1),
+            color: appcardColor,
             width: double.infinity,
             // height: MediaQuery.of(context).size.height / 3,
             child: Padding(
@@ -522,7 +522,7 @@ class _JobScreenState extends State<JobScreen> with SingleTickerProviderStateMix
             bottomLeft: Radius.circular(30.0),
           ),
           child: Container(
-            color: appTextColor2.withOpacity(0.1),
+            color: appcardColor,
             width: double.infinity,
             // height: MediaQuery.of(context).size.height / 3,
             child: Padding(
@@ -676,7 +676,7 @@ class _JobScreenState extends State<JobScreen> with SingleTickerProviderStateMix
             bottomLeft: Radius.circular(30.0),
           ),
           child: Container(
-            color: appTextColor2.withOpacity(0.1),
+            color: appcardColor,
             width: double.infinity,
             // height: MediaQuery.of(context).size.height / 3,
             child: Padding(
@@ -806,7 +806,7 @@ class _JobScreenState extends State<JobScreen> with SingleTickerProviderStateMix
             bottomLeft: Radius.circular(30.0),
           ),
           child: Container(
-            color: appTextColor2.withOpacity(0.1),
+            color: appcardColor,
             width: double.infinity,
             // height: MediaQuery.of(context).size.height / 3,
             child: Padding(

@@ -103,13 +103,13 @@ class _JobDetailsScreenState extends State<JobDetailsScreen> with SingleTickerPr
                           Text(
                             '\$20/per hr',
                             style: TextStyle(
-                                fontWeight: FontWeight.w700, fontSize: 16, color: appTextColor2),
+                                fontWeight: FontWeight.w700, fontSize: 14, color: appTextColor5),
                           ),
                           SizedBox(width: 20),
                           Text(
                             'Geneva, Switzerland',
                             style: TextStyle(
-                                fontWeight: FontWeight.w700, fontSize: 16, color: appTextColor2),
+                                fontWeight: FontWeight.w700, fontSize: 14, color: appTextColor5),
                           ),
                         ],
                       ),
@@ -145,8 +145,7 @@ class _JobDetailsScreenState extends State<JobDetailsScreen> with SingleTickerPr
                       ),
                       Container(
                         height: 2,
-                        width: MediaQuery.of(context).size.width / 3 -
-                            20,
+                        width: MediaQuery.of(context).size.width / 3-5,
                         color: selected == 'Job Description'
                             ? appTextColor
                             : appTextColor2,
@@ -176,8 +175,7 @@ class _JobDetailsScreenState extends State<JobDetailsScreen> with SingleTickerPr
                       ),
                       Container(
                         height: 2,
-                        width: MediaQuery.of(context).size.width / 3 -
-                            20,
+                        width: MediaQuery.of(context).size.width / 3-5,
                         color: selected == 'Company info'
                             ? appTextColor
                             : appTextColor2,
@@ -207,8 +205,7 @@ class _JobDetailsScreenState extends State<JobDetailsScreen> with SingleTickerPr
                       ),
                       Container(
                         height: 2,
-                        width: MediaQuery.of(context).size.width / 3 -
-                            20,
+                        width: MediaQuery.of(context).size.width / 3-5,
                         color: selected == 'Reviews'
                             ? appTextColor
                             : appTextColor2,
@@ -289,10 +286,11 @@ class _JobDetailsScreenState extends State<JobDetailsScreen> with SingleTickerPr
                 width: 120,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15),
-                  color: appOTPBg
+                  color: appbuttonbgColor
                 ),
                 child: Center(
-                  child: Text('Read More',style: TextStyle(fontSize: 14,fontWeight: FontWeight.w600,color: appTextColor3),),
+                  child: Text('Read More',
+                    style: TextStyle(fontSize: 14,fontWeight: FontWeight.w600,color: appTextColor3),),
                 ),
               ),
             ],
@@ -576,6 +574,7 @@ class _JobDetailsScreenState extends State<JobDetailsScreen> with SingleTickerPr
               ),
             ],
           ),
+          SizedBox(height: 5,),
           Row(
             children: [
               Icon(Icons.star,size: 20,color: Colors.amber,),
@@ -602,6 +601,7 @@ class _JobDetailsScreenState extends State<JobDetailsScreen> with SingleTickerPr
               ),
             ],
           ),
+          SizedBox(height: 5,),
           Row(
             children: [
               Icon(Icons.star,size: 20,color: Colors.amber,),

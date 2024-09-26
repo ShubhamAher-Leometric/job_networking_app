@@ -54,76 +54,76 @@ class _SliderScreenState extends State<SliderScreen> {
         Column(
           children: [
             Container(
-              height: 503,
+              height: 511,
               child: PageView(
                 physics: NeverScrollableScrollPhysics(),
                 controller: pageController,
                 children: [
-                   Column(
+                    Column(
               children: [
-              Image.asset(
+                  Image.asset(
                 'assets/images/Walkthrough 1.png',
                 fit: BoxFit.cover,
                 height: 250,
               ),
-      SizedBox(height: 20),
-      Container(
-        width: MediaQuery.of(context).size.width,
-        child: Center(
-          child: Column(
-            children: [
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    'Easily Find',
-                    style: TextStyle(
-                      fontSize: 36,
-                      fontWeight: FontWeight.w700,
+                  SizedBox(height: 20),
+                  Container(
+                    width: MediaQuery.of(context).size.width,
+                    child: Center(
+                      child: Column(
+                        children: [
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                'Easily Find',
+                                style: TextStyle(
+                                  fontSize: 36,
+                                  fontWeight: FontWeight.w700,
+                                ),
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                ' What',
+                                style: TextStyle(
+                                  fontSize: 36,
+                                  fontWeight: FontWeight.w700,
+                                  color: appPrimaryColor
+                                ),
+                                textAlign: TextAlign.center,
+                              ),
+                            ],
+                          ),
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                'Works',
+                                style: TextStyle(
+                                  fontSize: 32,
+                                  color: appPrimaryColor,
+                                  fontWeight: FontWeight.w700,
+                                ),
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                ' for You',
+                                style: TextStyle(
+                                  fontSize: 32,
+                                  fontWeight: FontWeight.w700,
+                                ),
+                                textAlign: TextAlign.center,
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
-                    textAlign: TextAlign.center,
                   ),
-                  Text(
-                    ' What',
-                    style: TextStyle(
-                      fontSize: 36,
-                      fontWeight: FontWeight.w700,
-                      color: appPrimaryColor
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
-                ],
-              ),
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    'Works',
-                    style: TextStyle(
-                      fontSize: 36,
-                      color: appPrimaryColor,
-                      fontWeight: FontWeight.w700,
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
-                  Text(
-                    ' for You',
-                    style: TextStyle(
-                      fontSize: 36,
-                      fontWeight: FontWeight.w700,
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
-                ],
-              ),
-            ],
-          ),
-        ),
-      ),
-      SizedBox(height: 20),
-      Container(
+                  SizedBox(height: 20),
+                  Container(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 10.0),
           child: Text(
@@ -136,9 +136,9 @@ class _SliderScreenState extends State<SliderScreen> {
           ),
         ),
       ),
-      ],
-    ),
-                  Column(
+                  ],
+                ),
+                    Column(
                     children: [
                       Image.asset(
                         'assets/images/Walkthrough 2.png',
@@ -158,7 +158,7 @@ class _SliderScreenState extends State<SliderScreen> {
                                   Text(
                                     'Earn Money',
                                     style: TextStyle(
-                                      fontSize: 36,
+                                      fontSize: 32,
                                       fontWeight: FontWeight.w700,
                                         color: appPrimaryColor
                                     ),
@@ -167,7 +167,7 @@ class _SliderScreenState extends State<SliderScreen> {
                                   Text(
                                     ' and',
                                     style: TextStyle(
-                                        fontSize: 36,
+                                        fontSize: 32,
                                         fontWeight: FontWeight.w700,
                                     ),
                                     textAlign: TextAlign.center,
@@ -181,7 +181,7 @@ class _SliderScreenState extends State<SliderScreen> {
                                   Text(
                                     'Experience for Every',
                                     style: TextStyle(
-                                      fontSize: 36,
+                                      fontSize: 32,
                                       fontWeight: FontWeight.w700,
                                     ),
                                     textAlign: TextAlign.center,
@@ -195,7 +195,7 @@ class _SliderScreenState extends State<SliderScreen> {
                                   Text(
                                     'Hour You Work',
                                     style: TextStyle(
-                                      fontSize: 36,
+                                      fontSize: 32,
                                       fontWeight: FontWeight.w700,
                                     ),
                                     textAlign: TextAlign.center,
@@ -222,7 +222,7 @@ class _SliderScreenState extends State<SliderScreen> {
                       ),
                     ],
                   ),
-                  Column(
+                    Column(
                     children: [
                       Image.asset(
                         'assets/images/Walkthrough 3.png',
@@ -242,7 +242,7 @@ class _SliderScreenState extends State<SliderScreen> {
                                   Text(
                                     'Unlock Opportunities',
                                     style: TextStyle(
-                                        fontSize: 36,
+                                        fontSize: 32,
                                         fontWeight: FontWeight.w700,
                                         color: appPrimaryColor
                                     ),
@@ -257,7 +257,7 @@ class _SliderScreenState extends State<SliderScreen> {
                                   Text(
                                     'Start Your Journey',
                                     style: TextStyle(
-                                      fontSize: 36,
+                                      fontSize: 32,
                                       fontWeight: FontWeight.w700,
                                     ),
                                     textAlign: TextAlign.center,
@@ -287,7 +287,7 @@ class _SliderScreenState extends State<SliderScreen> {
                 ],
               ),
             ),
-            SizedBox(height: 16),
+            SizedBox(height: 10),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10.0),
               child: Row(

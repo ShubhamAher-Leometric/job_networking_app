@@ -78,7 +78,7 @@ class _ResumeUploadScreenState extends State<ResumeUploadScreen> {
                           bottomLeft: Radius.circular(15.0),
                         ),
                         child: Container(
-                          color: appTextColor2.withOpacity(0.1),
+                          color: appcardColor,
                           width: double.infinity,
                           child: Padding(
                             padding: const EdgeInsets.all(10.0),

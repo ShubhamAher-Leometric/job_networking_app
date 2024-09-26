@@ -97,150 +97,150 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
             ),
-            SizedBox(height: 20,),
+            SizedBox(height: 10,),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20.0),
               child: Row(
                 children: [
-                  Text('Categories',style: TextStyle(fontSize: 16,
+                  Text('Recommended Jobs',style: TextStyle(fontSize: 16,
                       fontWeight: FontWeight.w700,color: appTextColor),),
                   Spacer(),
-                  Text('See all',style: TextStyle(fontSize: 14,
-                      fontWeight: FontWeight.w600,color: appTextColor),),
+                  // Text('See all',style: TextStyle(fontSize: 14,
+                  //     fontWeight: FontWeight.w600,color: appTextColor),),
                 ],
               ),
             ),
-            SizedBox(height: 20,),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20.0),
-              child: Container(
-                height: 100.0,  // Set the height of the ListView
-                child: ListView.builder(
-                  scrollDirection: Axis.horizontal,  // Enable horizontal scrolling
-                  itemCount: 1,  // Number of items (icons) to display
-                  itemBuilder: (context, index) {
-                    return Row(
-                      children: [
-                        Column(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Container(
-                                width: 60.0,  // Set the width of each icon container
-                                height: 60.0,  // Set the height to match the parent container
-                                decoration: BoxDecoration(
-                                  color: appCategoriesBgColor,  // Set the container color
-                                  shape: BoxShape.circle,  // Makes the container circular
-                                ),
-                                child: Center(
-                                  child: Image.asset(
-                                'assets/temp_images/Frame.png',height: 30,
-                                    width: 30,
-                                  ),
-                                ),
-                              ),
-                            ),
-                            Text('Hospitality',style: TextStyle(fontWeight: FontWeight.w700,fontSize: 12),)
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Container(
-                                width: 60.0,  // Set the width of each icon container
-                                height: 60.0,  // Set the height to match the parent container
-                                decoration: BoxDecoration(
-                                  color: appCategoriesBgColor,  // Set the container color
-                                  shape: BoxShape.circle,  // Makes the container circular
-                                ),
-                                child: Center(
-                                  child: Image.asset(
-                                    'assets/temp_images/Frame (1).png',height: 30,
-                                    width: 30,
-                                  ),
-                                ),
-                              ),
-                            ),
-                            Text('Logistics',style: TextStyle(fontWeight: FontWeight.w700,fontSize: 12),)
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Container(
-                                width: 60.0,  // Set the width of each icon container
-                                height: 60.0,  // Set the height to match the parent container
-                                decoration: BoxDecoration(
-                                  color: appCategoriesBgColor,  // Set the container color
-                                  shape: BoxShape.circle,  // Makes the container circular
-                                ),
-                                child: Center(
-                                  child: Image.asset(
-                                    'assets/temp_images/Frame (2).png',height: 30,
-                                    width: 30,
-                                  ),
-                                ),
-                              ),
-                            ),
-                            Text('Cleaning',style: TextStyle(fontWeight: FontWeight.w700,fontSize: 12),)
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Container(
-                                width: 60.0,  // Set the width of each icon container
-                                height: 60.0,  // Set the height to match the parent container
-                                decoration: BoxDecoration(
-                                  color: appCategoriesBgColor,  // Set the container color
-                                  shape: BoxShape.circle,  // Makes the container circular
-                                ),
-                                child: Center(
-                                  child: Image.asset(
-                                    'assets/temp_images/Frame (3).png',height: 30,
-                                    width: 30,
-                                  ),
-                                ),
-                              ),
-                            ),
-                            Text('Security',style: TextStyle(fontWeight: FontWeight.w700,fontSize: 12),)
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Container(
-                                width: 60.0,  // Set the width of each icon container
-                                height: 60.0,  // Set the height to match the parent container
-                                decoration: BoxDecoration(
-                                  color: appCategoriesBgColor,  // Set the container color
-                                  shape: BoxShape.circle,  // Makes the container circular
-                                ),
-                                child: Center(
-                                  child: Image.asset(
-                                    'assets/temp_images/chart.png',height: 30,
-                                    width: 30,
-                                  ),
-                                ),
-                              ),
-                            ),
-                            Text('Chart',style: TextStyle(fontWeight: FontWeight.w700,fontSize: 12),)
-                          ],
-                        ),
-
-
-
-                      ],
-                    );
-                  },
-                ),
-              ),
-            ),
-            SizedBox(height: 20,),
+            SizedBox(height: 10,),
+            // Padding(
+            //   padding: const EdgeInsets.symmetric(horizontal: 20.0),
+            //   child: Container(
+            //     height: 100.0,  // Set the height of the ListView
+            //     child: ListView.builder(
+            //       scrollDirection: Axis.horizontal,  // Enable horizontal scrolling
+            //       itemCount: 1,  // Number of items (icons) to display
+            //       itemBuilder: (context, index) {
+            //         return Row(
+            //           children: [
+            //             Column(
+            //               children: [
+            //                 Padding(
+            //                   padding: const EdgeInsets.all(8.0),
+            //                   child: Container(
+            //                     width: 60.0,  // Set the width of each icon container
+            //                     height: 60.0,  // Set the height to match the parent container
+            //                     decoration: BoxDecoration(
+            //                       color: appCategoriesBgColor,  // Set the container color
+            //                       shape: BoxShape.circle,  // Makes the container circular
+            //                     ),
+            //                     child: Center(
+            //                       child: Image.asset(
+            //                     'assets/temp_images/Frame.png',height: 30,
+            //                         width: 30,
+            //                       ),
+            //                     ),
+            //                   ),
+            //                 ),
+            //                 Text('Hospitality',style: TextStyle(fontWeight: FontWeight.w700,fontSize: 12),)
+            //               ],
+            //             ),
+            //             Column(
+            //               children: [
+            //                 Padding(
+            //                   padding: const EdgeInsets.all(8.0),
+            //                   child: Container(
+            //                     width: 60.0,  // Set the width of each icon container
+            //                     height: 60.0,  // Set the height to match the parent container
+            //                     decoration: BoxDecoration(
+            //                       color: appCategoriesBgColor,  // Set the container color
+            //                       shape: BoxShape.circle,  // Makes the container circular
+            //                     ),
+            //                     child: Center(
+            //                       child: Image.asset(
+            //                         'assets/temp_images/Frame (1).png',height: 30,
+            //                         width: 30,
+            //                       ),
+            //                     ),
+            //                   ),
+            //                 ),
+            //                 Text('Logistics',style: TextStyle(fontWeight: FontWeight.w700,fontSize: 12),)
+            //               ],
+            //             ),
+            //             Column(
+            //               children: [
+            //                 Padding(
+            //                   padding: const EdgeInsets.all(8.0),
+            //                   child: Container(
+            //                     width: 60.0,  // Set the width of each icon container
+            //                     height: 60.0,  // Set the height to match the parent container
+            //                     decoration: BoxDecoration(
+            //                       color: appCategoriesBgColor,  // Set the container color
+            //                       shape: BoxShape.circle,  // Makes the container circular
+            //                     ),
+            //                     child: Center(
+            //                       child: Image.asset(
+            //                         'assets/temp_images/Frame (2).png',height: 30,
+            //                         width: 30,
+            //                       ),
+            //                     ),
+            //                   ),
+            //                 ),
+            //                 Text('Cleaning',style: TextStyle(fontWeight: FontWeight.w700,fontSize: 12),)
+            //               ],
+            //             ),
+            //             Column(
+            //               children: [
+            //                 Padding(
+            //                   padding: const EdgeInsets.all(8.0),
+            //                   child: Container(
+            //                     width: 60.0,  // Set the width of each icon container
+            //                     height: 60.0,  // Set the height to match the parent container
+            //                     decoration: BoxDecoration(
+            //                       color: appCategoriesBgColor,  // Set the container color
+            //                       shape: BoxShape.circle,  // Makes the container circular
+            //                     ),
+            //                     child: Center(
+            //                       child: Image.asset(
+            //                         'assets/temp_images/Frame (3).png',height: 30,
+            //                         width: 30,
+            //                       ),
+            //                     ),
+            //                   ),
+            //                 ),
+            //                 Text('Security',style: TextStyle(fontWeight: FontWeight.w700,fontSize: 12),)
+            //               ],
+            //             ),
+            //             Column(
+            //               children: [
+            //                 Padding(
+            //                   padding: const EdgeInsets.all(8.0),
+            //                   child: Container(
+            //                     width: 60.0,  // Set the width of each icon container
+            //                     height: 60.0,  // Set the height to match the parent container
+            //                     decoration: BoxDecoration(
+            //                       color: appCategoriesBgColor,  // Set the container color
+            //                       shape: BoxShape.circle,  // Makes the container circular
+            //                     ),
+            //                     child: Center(
+            //                       child: Image.asset(
+            //                         'assets/temp_images/chart.png',height: 30,
+            //                         width: 30,
+            //                       ),
+            //                     ),
+            //                   ),
+            //                 ),
+            //                 Text('Chart',style: TextStyle(fontWeight: FontWeight.w700,fontSize: 12),)
+            //               ],
+            //             ),
+            //
+            //
+            //
+            //           ],
+            //         );
+            //       },
+            //     ),
+            //   ),
+            // ),
+            // SizedBox(height: 20,),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20.0),
               child: buildAutoScrollingContainer(),

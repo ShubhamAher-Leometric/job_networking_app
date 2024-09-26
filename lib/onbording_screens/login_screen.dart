@@ -151,7 +151,7 @@ class _LoginPageState extends State<LoginPage> {
                         borderRadius: BorderRadius.circular(30),
                         border: Border.all(color: appTextColor2)
                       ),
-                      child: Image.asset('assets/icons/social_login1.png',height: 24,width: 24,)),
+                      child: Image.asset('assets/icons/apple.png',height: 24,width: 24,)),
                   SizedBox(width: 10,),
                   Container(
                       height: 48,
@@ -160,7 +160,8 @@ class _LoginPageState extends State<LoginPage> {
                           borderRadius: BorderRadius.circular(30),
                           border: Border.all(color: appTextColor2)
                       ),
-                      child: Image.asset('assets/icons/social_login2.png',height: 24,width: 24,)),                    SizedBox(width: 10,),
+                      child: Image.asset('assets/icons/google.png',height: 24,width: 24,)),
+                  SizedBox(width: 10,),
                   Container(
                       height: 48,
                       width: 48,
@@ -168,7 +169,7 @@ class _LoginPageState extends State<LoginPage> {
                           borderRadius: BorderRadius.circular(30),
                           border: Border.all(color: appTextColor2)
                       ),
-                      child: Image.asset('assets/icons/social_login3.png',height: 24,width: 24,)),                  ],
+                      child: Image.asset('assets/icons/facebook.png',height: 24,width: 24,)),                  ],
               ),
               SizedBox(height: screenHeight * 0.030),
               Row(
