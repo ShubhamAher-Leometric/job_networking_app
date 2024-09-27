@@ -19,6 +19,7 @@ class _LookingForScreenState extends State<LookingForScreen> {
     double screenWidth = screenSize.width;
     double screenHeight = screenSize.height;
     return Scaffold(
+      backgroundColor: appbackgroundColor,
       body: Stack(
         fit: StackFit.expand,
         children: [

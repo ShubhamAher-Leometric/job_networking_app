@@ -17,7 +17,7 @@ class CustomElevatedButton extends StatelessWidget {
     double screenWidth = screenSize.width;
     double screenHeight = screenSize.height;
     return Container(
-      height: screenHeight * 0.08,
+      height: 56,
       child: ElevatedButton(
         onPressed: onPressed,
         style: ButtonStyle(

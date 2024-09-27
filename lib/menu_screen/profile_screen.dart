@@ -14,6 +14,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: appbackgroundColor,
       body: SafeArea(
           child: Column(
           children: [
@@ -31,7 +32,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       padding: const EdgeInsets.symmetric(horizontal: 10.0),
                       child: Row(
                         children: [
-                          Icon(Icons.arrow_back_ios_new_rounded,size: 24,),
+                          Icon(Icons.arrow_back_outlined,size: 24,),
                           Spacer(),
                           Text(
                               'My profile',
@@ -133,6 +134,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               );
             },
             child: Image.asset('assets/icons/edit.png',height: 24,width: 24,)),
+        SizedBox(width: 10,),
       ],
     ),
   ),
@@ -181,7 +183,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 padding: const EdgeInsets.all(10.0),
                 child: Row(
                   children: [
-                    Image.asset('assets/icons/Settings.png',height: 24,width: 24,),
+                    Image.asset('assets/icons/Logout.png',height: 24,width: 24,),
                     SizedBox(width: 10,),
                     Text('Logout',style: const TextStyle(fontWeight: FontWeight.w600,fontSize: 16,color: appTextColor4)),
                   ],

@@ -20,6 +20,7 @@ class _SucessScreenState extends State<SucessScreen> {
     double screenHeight = screenSize.height;
     
     return Scaffold(
+      backgroundColor: appbackgroundColor,
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20.0),
         child: Column(

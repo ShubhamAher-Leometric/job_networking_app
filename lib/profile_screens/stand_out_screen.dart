@@ -17,9 +17,13 @@ class _StandOutScreenState extends State<StandOutScreen> {
     double screenWidth = screenSize.width;
     double screenHeight = screenSize.height;
     return Scaffold(
+      backgroundColor: appbackgroundColor,
       body: Stack(
         children: [
-          Center(child: Image.asset('assets/images/walkthrough_4.png')),
+          Padding(
+            padding: const EdgeInsets.all(50.0),
+            child: Center(child: Image.asset('assets/images/walkthrough_4.png')),
+          ),
           Positioned(
             bottom: 0,
             child: Container(
@@ -46,12 +50,12 @@ class _StandOutScreenState extends State<StandOutScreen> {
                     children: [
                       Text(
                         'Stand Out and',
-                        style: TextStyle(fontSize: 36, fontWeight: FontWeight.w700),
+                        style: TextStyle(fontSize: 32, fontWeight: FontWeight.w700),
                         textAlign: TextAlign.center,
                       ),
                       Text(
                         'Get Hired',
-                        style: TextStyle(fontSize: 36, fontWeight: FontWeight.w700,color: appPrimaryColor),
+                        style: TextStyle(fontSize: 32, fontWeight: FontWeight.w700,color: appPrimaryColor),
                         textAlign: TextAlign.center,
                       ),
                     ],
@@ -70,8 +74,8 @@ class _StandOutScreenState extends State<StandOutScreen> {
                   ),
                   SizedBox(height: screenHeight * 0.020),
                   Container(
-                    height: screenHeight * 0.08,
-                    width: screenWidth * 0.70,
+                    height: 56,
+                    width: 230,
                     child: ElevatedButton(
                       onPressed: () {
                         Navigator.push(
@@ -103,10 +107,10 @@ class _StandOutScreenState extends State<StandOutScreen> {
                             'Complete Your Profile',
                             style: TextStyle(
                                 color: Colors.white,
-                                fontSize: 16,
+                                fontSize: 15,
                                 fontWeight: FontWeight.w700),
                           ),
-                          SizedBox(width: 10,),
+                          SizedBox(width: 5,),
                           Icon(Icons.arrow_forward_outlined)
                         ],
                       ),

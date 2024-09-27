@@ -20,6 +20,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
     double screenHeight = screenSize.height;
     double titleFontSize = screenWidth * 0.08;
     return Scaffold(
+      backgroundColor: appbackgroundColor,
       body: SingleChildScrollView(
         padding: EdgeInsets.symmetric(
             horizontal: screenWidth * 0.05, vertical: 20),
@@ -35,11 +36,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                   },
                   child: Row(
                     children: [
-                      Icon(Icons.arrow_back_ios_new_rounded,size: 24,),
-                      Text(
-                          'Back',
-                          style: const TextStyle(fontWeight: FontWeight.bold)
-                      ),
+                      Icon(Icons.arrow_back_outlined,size: 24,),
                     ],
                   ),
                 ),

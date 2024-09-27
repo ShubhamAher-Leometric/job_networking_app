@@ -40,6 +40,7 @@ class _JobDetailsScreenState extends State<JobDetailsScreen> with SingleTickerPr
     double screenWidth = screenSize.width;
     double screenHeight = screenSize.height;
     return Scaffold(
+      backgroundColor: appbackgroundColor,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -163,7 +164,7 @@ class _JobDetailsScreenState extends State<JobDetailsScreen> with SingleTickerPr
                           setSelectedTab('Company info');
                         },
                         child: Text(
-                          'Company info',
+                          'Company',
                           style: TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.w400,
@@ -279,6 +280,7 @@ class _JobDetailsScreenState extends State<JobDetailsScreen> with SingleTickerPr
               ),
             ],
           ),
+          SizedBox(height: 5,),
           Row(
             children: [
               Container(
@@ -426,7 +428,7 @@ class _JobDetailsScreenState extends State<JobDetailsScreen> with SingleTickerPr
           SizedBox(height: 10),
           Container(
             width: screenWidth * 0.6,
-            height: screenHeight * 0.08,
+            height: 56,
             child: ElevatedButton(
               onPressed: (){
                 Navigator.push(
@@ -513,7 +515,7 @@ class _JobDetailsScreenState extends State<JobDetailsScreen> with SingleTickerPr
           SizedBox(height: 10),
           Container(
             width: screenWidth * 0.6,
-            height: screenHeight * 0.08,
+            height: 56,
             child: ElevatedButton(
               onPressed: (){
                 Navigator.push(
@@ -617,7 +619,7 @@ class _JobDetailsScreenState extends State<JobDetailsScreen> with SingleTickerPr
           SizedBox(height: 10),
           Container(
             width: screenWidth * 0.6,
-            height: screenHeight * 0.08,
+            height: 56,
             child: ElevatedButton(
               onPressed: (){
                 Navigator.push(

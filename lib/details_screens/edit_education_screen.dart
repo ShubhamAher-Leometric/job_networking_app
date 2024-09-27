@@ -18,6 +18,7 @@ class _EditEducationScreenState extends State<EditEducationScreen> {
     double screenWidth = screenSize.width;
     double screenHeight = screenSize.height;
     return Scaffold(
+      backgroundColor: appbackgroundColor,
       body: Center(
         child: Padding(
           padding: EdgeInsets.symmetric(
@@ -32,7 +33,7 @@ class _EditEducationScreenState extends State<EditEducationScreen> {
                     Navigator.pop(context);},
                   child: Row(
                     children: [
-                      Icon(Icons.arrow_back_ios_new_rounded,size: 24,),
+                      Icon(Icons.arrow_back_outlined,size: 24,),
                       Spacer(),
                       Text(
                           'Education',
@@ -135,6 +136,7 @@ class _EditEducationScreenState extends State<EditEducationScreen> {
                   ),
                 ),
               ),
+              SizedBox(height: 20,),
               Spacer(),
               CustomElevatedButton(onPressed: (){
                 // Navigator.push(

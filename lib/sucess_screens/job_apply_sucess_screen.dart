@@ -20,6 +20,7 @@ class _JobApplySucessScreenState extends State<JobApplySucessScreen> {
     double screenHeight = screenSize.height;
 
     return Scaffold(
+      backgroundColor: appbackgroundColor,
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20.0),
         child: Column(
@@ -75,7 +76,7 @@ class _JobApplySucessScreenState extends State<JobApplySucessScreen> {
                   Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 20.0),
                   child: Container(
-                    height: screenHeight * 0.08,
+                    height: 56,
                     child: ElevatedButton(
                       onPressed: (){},
                       style: ButtonStyle(

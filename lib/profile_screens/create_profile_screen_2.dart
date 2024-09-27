@@ -37,6 +37,7 @@ class _CreateProfileScreen2State extends State<CreateProfileScreen2> {
     double screenHeight = screenSize.height;
 
     return Scaffold(
+      backgroundColor: appbackgroundColor,
       body: SingleChildScrollView(
         padding: EdgeInsets.symmetric(
             horizontal: screenWidth * 0.05, vertical: 20),
@@ -52,11 +53,7 @@ class _CreateProfileScreen2State extends State<CreateProfileScreen2> {
                 },
                 child: Row(
                   children: [
-                    Icon(Icons.arrow_back_ios_new_rounded,size: 24,),
-                    Text(
-                        'Back',
-                        style: const TextStyle(fontWeight: FontWeight.bold)
-                    ),
+                    Icon(Icons.arrow_back_outlined,size: 24,),
                   ],
                 ),
               ),
@@ -134,24 +131,6 @@ class _CreateProfileScreen2State extends State<CreateProfileScreen2> {
                   labelText: 'Profile Summary',
                   labelStyle: TextStyle(color: appTextfilledColor),
                   hintText: 'Write a short description',
-                ),
-              ),
-            ),
-            SizedBox(height: screenHeight * 0.030),
-            SizedBox(
-              height: screenHeight * 0.08,
-              child: TextField(
-                cursorColor: appPrimaryColor,
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(
-                    borderSide: BorderSide(color: appTextfilledColor), // Set border color
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: appTextfilledColor), // Set focused border color
-                  ),
-                  labelText: 'Job Preferences',
-                  labelStyle: TextStyle(color: appTextfilledColor),
-                  hintText: 'e.g., Retail, Hospitality, Logistics',
                 ),
               ),
             ),

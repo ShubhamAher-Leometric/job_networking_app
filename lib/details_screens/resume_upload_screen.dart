@@ -18,6 +18,7 @@ class _ResumeUploadScreenState extends State<ResumeUploadScreen> {
     double screenWidth = screenSize.width;
     double screenHeight = screenSize.height;
     return Scaffold(
+      backgroundColor: appbackgroundColor,
       body: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.symmetric(
@@ -32,7 +33,7 @@ class _ResumeUploadScreenState extends State<ResumeUploadScreen> {
                     Navigator.pop(context);},
                   child: Row(
                     children: [
-                      Icon(Icons.arrow_back_ios_new_rounded,size: 24,),
+                      Icon(Icons.arrow_back_outlined,size: 24,),
                       Spacer(),
                       Text(
                           'Resume Upload',
@@ -127,7 +128,7 @@ class _ResumeUploadScreenState extends State<ResumeUploadScreen> {
                     SizedBox(height: screenHeight * 0.030),
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 30.0),
-                      child: CustomElevatedButton(onPressed: (){}, title: 'Add More'),
+                      child: CustomElevatedButton(onPressed: (){}, title: 'Update'),
                     ),
                     SizedBox(height: screenHeight * 0.030),
                   ],

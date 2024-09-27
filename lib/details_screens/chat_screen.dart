@@ -19,6 +19,7 @@ class _ChatScreenState extends State<ChatScreen> {
     double screenHeight = screenSize.height;
     double titleFontSize = screenWidth * 0.08;
     return Scaffold(
+      backgroundColor: appbackgroundColor,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20.0),
@@ -36,7 +37,7 @@ class _ChatScreenState extends State<ChatScreen> {
                       children: [
                         Row(
                           children: [
-                            Icon(Icons.arrow_back_ios_new_rounded,size: 24,),
+                            Icon(Icons.arrow_back_outlined,size: 24,),
                             Image.asset('assets/temp_images/dummy_user4.png',height: 30,width: 30,),
                           ],
                         ),

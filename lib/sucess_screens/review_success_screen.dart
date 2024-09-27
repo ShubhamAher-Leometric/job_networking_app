@@ -1,18 +1,18 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:job_networking_app/menu_screen.dart';
 
 import '../constants/color_constants.dart';
 import '../constants/custom_elevated_button.dart';
-import '../menu_screen.dart';
 
-class ProfileScucessScreen extends StatefulWidget {
-  const ProfileScucessScreen({super.key});
+class ReviewSuccessScreen extends StatefulWidget {
+  const ReviewSuccessScreen({super.key});
 
   @override
-  State<ProfileScucessScreen> createState() => _ProfileScucessScreenState();
+  State<ReviewSuccessScreen> createState() => _ReviewSuccessScreenState();
 }
 
-class _ProfileScucessScreenState extends State<ProfileScucessScreen> {
+class _ReviewSuccessScreenState extends State<ReviewSuccessScreen> {
   @override
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;
@@ -41,8 +41,6 @@ class _ProfileScucessScreenState extends State<ProfileScucessScreen> {
                 ],
               ),
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   SizedBox(height: screenHeight * 0.030),
                   Container(
@@ -51,12 +49,12 @@ class _ProfileScucessScreenState extends State<ProfileScucessScreen> {
                     child: Image.asset('assets/icons/Yellow_success.png'),
                   ),
                   SizedBox(height: screenHeight * 0.030),
-                  Text('Profile Successfully',style: TextStyle(fontSize: 24,fontWeight: FontWeight.w600),),
-                  Text('Created',style: TextStyle(fontSize: 24,fontWeight: FontWeight.w600),),
+                  Text('Review Submitted',style: TextStyle(fontSize: 24,fontWeight: FontWeight.w600),),
+                  Text('Successful',style: TextStyle(fontSize: 24,fontWeight: FontWeight.w600),),
                   SizedBox(height: screenHeight * 0.010),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 60.0),
-                    child: Text(' Your Profile has been Successfully created!',textAlign: TextAlign.center,
+                    child: Text(' Your review has been published successfully!',textAlign: TextAlign.center,
                       style: TextStyle(fontSize: 12,fontWeight: FontWeight.w400,color: appTextColor2),
                     ),
                   ),

@@ -40,6 +40,7 @@ class _JobScreenState extends State<JobScreen> with SingleTickerProviderStateMix
     double screenHeight = screenSize.height;
     double titleFontSize = screenWidth * 0.08;
     return Scaffold(
+      backgroundColor: appbackgroundColor,
       body: SingleChildScrollView(
         padding: EdgeInsets.symmetric(
             horizontal: screenWidth * 0.05, vertical: 20),
@@ -54,7 +55,7 @@ class _JobScreenState extends State<JobScreen> with SingleTickerProviderStateMix
                     Navigator.pop(context);},
                   child: Row(
                     children: [
-                      Icon(Icons.arrow_back_ios_new_rounded,size: 24,),
+                      Icon(Icons.arrow_back_outlined,size: 24,),
                       Spacer(),
                       Text(
                           'My Jobs',
@@ -296,7 +297,8 @@ class _JobScreenState extends State<JobScreen> with SingleTickerProviderStateMix
                                     ),
                                   ),
                                 ),
-                                Spacer(),
+                                SizedBox(width: 10,),
+
                                 Container(
                                   decoration: BoxDecoration(
                                       color: appbackgroundColor,
@@ -312,23 +314,7 @@ class _JobScreenState extends State<JobScreen> with SingleTickerProviderStateMix
                                     ),
                                   ),
                                 ),
-                                Spacer(),
-                                Container(
-                                  decoration: BoxDecoration(
-                                      color: appbackgroundColor,
-                                      borderRadius: BorderRadius.circular(15)
-                                  ),
-                                  child: Padding(
-                                    padding: const EdgeInsets.symmetric(horizontal: 5.0,vertical: 3),
-                                    child: Row(
-                                      children: [
-                                        Text('Junior',style: TextStyle(fontSize: 12,
-                                            fontWeight: FontWeight.w400,color: appTextColor2),),
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                                Spacer(),
+                                SizedBox(width: 10,),
                                 Text('\$18/per hr',
                                   style: TextStyle(fontWeight: FontWeight.w700,
                                       fontSize: 12),),
@@ -434,7 +420,7 @@ class _JobScreenState extends State<JobScreen> with SingleTickerProviderStateMix
                                     ),
                                   ),
                                 ),
-                                Spacer(),
+                                SizedBox(width: 10,),
                                 Container(
                                   decoration: BoxDecoration(
                                       color: appbackgroundColor,
@@ -450,23 +436,8 @@ class _JobScreenState extends State<JobScreen> with SingleTickerProviderStateMix
                                     ),
                                   ),
                                 ),
-                                Spacer(),
-                                Container(
-                                  decoration: BoxDecoration(
-                                      color: appbackgroundColor,
-                                      borderRadius: BorderRadius.circular(15)
-                                  ),
-                                  child: Padding(
-                                    padding: const EdgeInsets.symmetric(horizontal: 5.0,vertical: 3),
-                                    child: Row(
-                                      children: [
-                                        Text('Junior',style: TextStyle(fontSize: 12,
-                                            fontWeight: FontWeight.w400,color: appTextColor2),),
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                                Spacer(),
+                                SizedBox(width: 10,),
+
                                 Text('\$18/per hr',
                                   style: TextStyle(fontWeight: FontWeight.w700,
                                       fontSize: 12),),
@@ -588,7 +559,7 @@ class _JobScreenState extends State<JobScreen> with SingleTickerProviderStateMix
                                     ),
                                   ),
                                 ),
-                                Spacer(),
+                                SizedBox(width: 10,),
                                 Container(
                                   decoration: BoxDecoration(
                                       color: appbackgroundColor,
@@ -604,23 +575,7 @@ class _JobScreenState extends State<JobScreen> with SingleTickerProviderStateMix
                                     ),
                                   ),
                                 ),
-                                Spacer(),
-                                Container(
-                                  decoration: BoxDecoration(
-                                      color: appbackgroundColor,
-                                      borderRadius: BorderRadius.circular(15)
-                                  ),
-                                  child: Padding(
-                                    padding: const EdgeInsets.symmetric(horizontal: 5.0,vertical: 3),
-                                    child: Row(
-                                      children: [
-                                        Text('Junior',style: TextStyle(fontSize: 12,
-                                            fontWeight: FontWeight.w400,color: appTextColor2),),
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                                Spacer(),
+                                SizedBox(width: 10,),
                                 Text('\$18/per hr',
                                   style: TextStyle(fontWeight: FontWeight.w700,
                                       fontSize: 12),),
@@ -742,7 +697,7 @@ class _JobScreenState extends State<JobScreen> with SingleTickerProviderStateMix
                                     ),
                                   ),
                                 ),
-                                Spacer(),
+                                SizedBox(width: 10,),
                                 Container(
                                   decoration: BoxDecoration(
                                       color: appbackgroundColor,
@@ -758,23 +713,7 @@ class _JobScreenState extends State<JobScreen> with SingleTickerProviderStateMix
                                     ),
                                   ),
                                 ),
-                                Spacer(),
-                                Container(
-                                  decoration: BoxDecoration(
-                                      color: appbackgroundColor,
-                                      borderRadius: BorderRadius.circular(15)
-                                  ),
-                                  child: Padding(
-                                    padding: const EdgeInsets.symmetric(horizontal: 5.0,vertical: 3),
-                                    child: Row(
-                                      children: [
-                                        Text('Junior',style: TextStyle(fontSize: 12,
-                                            fontWeight: FontWeight.w400,color: appTextColor2),),
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                                Spacer(),
+                              SizedBox(width: 10,),
                                 Text('\$18/per hr',
                                   style: TextStyle(fontWeight: FontWeight.w700,
                                       fontSize: 12),),
@@ -791,7 +730,6 @@ class _JobScreenState extends State<JobScreen> with SingleTickerProviderStateMix
                       )
                     ],
                   ),
-
                 ],
               ),
             ),
@@ -818,7 +756,7 @@ class _JobScreenState extends State<JobScreen> with SingleTickerProviderStateMix
                     children: [
                       Column(
                         children: [
-                          Image.asset('assets/temp_images/logo_container.png',height: 50,width: 50,)
+                          Image.asset('assets/temp_images/compony_logo.png',height: 50,width: 50,)
                         ],
                       ),
                       Column(
@@ -830,7 +768,7 @@ class _JobScreenState extends State<JobScreen> with SingleTickerProviderStateMix
                             child: Row(
                               children: [
                                 SizedBox(width: 10,),
-                                Text('Delivery Driver',style: TextStyle(fontSize: 16,
+                                Text('House Cleaner',style: TextStyle(fontSize: 16,
                                     fontWeight: FontWeight.w600,color: appTextColor),),
                                 Spacer(),
                                 Image.asset('assets/icons/close.png',height: 20,width: 20,),
@@ -872,7 +810,7 @@ class _JobScreenState extends State<JobScreen> with SingleTickerProviderStateMix
                                     ),
                                   ),
                                 ),
-                                Spacer(),
+                                SizedBox(width: 10,),
                                 Container(
                                   decoration: BoxDecoration(
                                       color: appbackgroundColor,
@@ -888,23 +826,7 @@ class _JobScreenState extends State<JobScreen> with SingleTickerProviderStateMix
                                     ),
                                   ),
                                 ),
-                                Spacer(),
-                                Container(
-                                  decoration: BoxDecoration(
-                                      color: appbackgroundColor,
-                                      borderRadius: BorderRadius.circular(15)
-                                  ),
-                                  child: Padding(
-                                    padding: const EdgeInsets.symmetric(horizontal: 5.0,vertical: 3),
-                                    child: Row(
-                                      children: [
-                                        Text('Junior',style: TextStyle(fontSize: 12,
-                                            fontWeight: FontWeight.w400,color: appTextColor2),),
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                                Spacer(),
+                                SizedBox(width: 10,),
                                 Text('\$18/per hr',
                                   style: TextStyle(fontWeight: FontWeight.w700,
                                       fontSize: 12),),
@@ -914,22 +836,13 @@ class _JobScreenState extends State<JobScreen> with SingleTickerProviderStateMix
                           SizedBox(height: 10,),
                           Row(
                             children: [
-                              Container(
-                                height: 40,
-                                width: 150,
-                                decoration: BoxDecoration(
-                                    color: appsecondaryColor,
-                                    borderRadius: BorderRadius.circular(10)
-                                ),
-                                child: Center(child: Text('Apply Now',style: TextStyle(fontSize: 14,fontWeight: FontWeight.w600,color: appbackgroundColor),)),
-                              )
+                              Center(child: Text('Applied 1mo ago',style: TextStyle(fontSize: 13,fontWeight: FontWeight.w600,color: appTextColor2),))
                             ],
                           ),
                         ],
                       )
                     ],
                   ),
-
                 ],
               ),
             ),

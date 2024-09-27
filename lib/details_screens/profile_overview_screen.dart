@@ -21,6 +21,7 @@ class _ProfileOverviewScreenState extends State<ProfileOverviewScreen> {
     double screenHeight = screenSize.height;
     double titleFontSize = screenWidth * 0.08;
     return Scaffold(
+      backgroundColor: appbackgroundColor,
       body: SingleChildScrollView(
         padding: EdgeInsets.symmetric(
             horizontal: screenWidth * 0.05, vertical: 20),
@@ -35,7 +36,7 @@ class _ProfileOverviewScreenState extends State<ProfileOverviewScreen> {
                     Navigator.pop(context);},
                   child: Row(
                     children: [
-                      Icon(Icons.arrow_back_ios_new_rounded,size: 24,),
+                      Icon(Icons.arrow_back_outlined,size: 24,),
                       Spacer(),
                       Text(
                           'Profile Overview',
@@ -149,7 +150,7 @@ class _ProfileOverviewScreenState extends State<ProfileOverviewScreen> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.center,
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
                                 Container(
@@ -175,23 +176,30 @@ class _ProfileOverviewScreenState extends State<ProfileOverviewScreen> {
                                 ),
                                 SizedBox(height: 10,),
                                 Container(
-                                  width: MediaQuery.of(context).size.width/1-60,
-                                  child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    crossAxisAlignment: CrossAxisAlignment.center,
-                                    children: [
-                                      Image.asset('assets/icons/pdf_icon.png',height: 45,),
-                                      SizedBox(width: 10,),
-                                      Column(
-                                        crossAxisAlignment: CrossAxisAlignment.start,
-                                        children: [
-                                          Text('Rifat_CV_UX Designer',style: TextStyle(fontSize: 14,
-                                              fontWeight: FontWeight.w500,color: appTextColor),),
-                                          Text('287 KB',style: TextStyle(fontSize: 11,
-                                              fontWeight: FontWeight.w400,color: appTextColor2),),
-                                        ],
-                                      ),
-                                    ],
+                                  decoration: BoxDecoration(
+                                    color: appsubcardColor,
+                                    borderRadius: BorderRadius.circular(15)
+                                  ),
+                                  width: MediaQuery.of(context).size.width/1.5,
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      crossAxisAlignment: CrossAxisAlignment.center,
+                                      children: [
+                                        Image.asset('assets/icons/pdf_icon.png',height: 45,),
+                                        SizedBox(width: 10,),
+                                        Column(
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: [
+                                            Text('Rifat_CV_UX Designer',style: TextStyle(fontSize: 14,
+                                                fontWeight: FontWeight.w500,color: appTextColor),),
+                                            Text('287 KB',style: TextStyle(fontSize: 11,
+                                                fontWeight: FontWeight.w400,color: appTextColor2),),
+                                          ],
+                                        ),
+                                      ],
+                                    ),
                                   ),
                                 ),
                                 SizedBox(height: 10,),

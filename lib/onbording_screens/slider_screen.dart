@@ -39,6 +39,7 @@ class _SliderScreenState extends State<SliderScreen> {
     double screenHeight = screenSize.height;
 
     return Scaffold(
+      backgroundColor: appbackgroundColor,
       body: Column(
         children: [
           SizedBox(height: screenHeight * 0.15),
@@ -244,7 +245,7 @@ class _SliderScreenState extends State<SliderScreen> {
                                     style: TextStyle(
                                         fontSize: 32,
                                         fontWeight: FontWeight.w700,
-                                        color: appPrimaryColor
+                                        color: appsecondaryColor
                                     ),
                                     textAlign: TextAlign.center,
                                   ),
@@ -259,6 +260,7 @@ class _SliderScreenState extends State<SliderScreen> {
                                     style: TextStyle(
                                       fontSize: 32,
                                       fontWeight: FontWeight.w700,
+                                      color: appPrimaryColor
                                     ),
                                     textAlign: TextAlign.center,
                                   ),
@@ -292,7 +294,7 @@ class _SliderScreenState extends State<SliderScreen> {
               padding: const EdgeInsets.symmetric(horizontal: 10.0),
               child: Row(
                 children: [
-                  currentPage > 0
+                  currentPage < 2
                       ? Container(
                     height: 50,
                     width: 50,

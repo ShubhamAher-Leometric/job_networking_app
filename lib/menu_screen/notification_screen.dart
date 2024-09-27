@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:job_networking_app/details_screens/review_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../constants/color_constants.dart';
@@ -40,6 +41,7 @@ class _NotificationScreenState extends State<NotificationScreen>  with SingleTic
     double screenWidth = screenSize.width;
     double screenHeight = screenSize.height;
     return Scaffold(
+      backgroundColor: appbackgroundColor,
       body: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.symmetric(
@@ -54,7 +56,7 @@ class _NotificationScreenState extends State<NotificationScreen>  with SingleTic
                     Navigator.pop(context);},
                   child: Row(
                     children: [
-                      Icon(Icons.arrow_back_ios_new_rounded,size: 24,),
+                      Icon(Icons.arrow_back_outlined,size: 24,),
                       Spacer(),
                       Text(
                           'Notification',
@@ -208,36 +210,46 @@ class _NotificationScreenState extends State<NotificationScreen>  with SingleTic
           padding: const EdgeInsets.symmetric(horizontal: 20.0),
           child: Column(
             children: [
-              Container(
-                decoration: BoxDecoration(
-                ),
-                child: Column(
-                  children: [
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Icon(Icons.circle_rounded,size: 10,),
-                        Image.asset('assets/icons/notfication_list.png',height: 50,width: 50,),
-                        SizedBox(width: 10,),
-                        Expanded(child: Text('A recruiter has recently shown interest in your profile',
-                            style:TextStyle(fontWeight: FontWeight.w400,fontSize: 14,color: appTextColor)))
-                      ],
+              GestureDetector(
+                onTap: (){
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => ReviewScreen(),
                     ),
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        SizedBox(width: 70,),
-                        Expanded(child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text('Profile Performance',
-                                style:TextStyle(fontWeight: FontWeight.w400,fontSize: 10,color: appTextColor2)),
-                            Text('12h ago',
-                                style:TextStyle(fontWeight: FontWeight.w400,fontSize: 10,color: appTextColor2)),
-                          ],
-                        ))
-                      ],
-                    )
-                  ],
+                  );
+                },
+                child: Container(
+                  decoration: BoxDecoration(
+                  ),
+                  child: Column(
+                    children: [
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Icon(Icons.circle_rounded,size: 10,),
+                          Image.asset('assets/icons/notfication_list.png',height: 50,width: 50,),
+                          SizedBox(width: 10,),
+                          Expanded(child: Text('A recruiter has recently shown interest in your profile',
+                              style:TextStyle(fontWeight: FontWeight.w400,fontSize: 14,color: appTextColor)))
+                        ],
+                      ),
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          SizedBox(width: 70,),
+                          Expanded(child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text('Profile Performance',
+                                  style:TextStyle(fontWeight: FontWeight.w400,fontSize: 10,color: appTextColor2)),
+                              Text('12h ago',
+                                  style:TextStyle(fontWeight: FontWeight.w400,fontSize: 10,color: appTextColor2)),
+                            ],
+                          ))
+                        ],
+                      )
+                    ],
+                  ),
                 ),
               ),
             ],

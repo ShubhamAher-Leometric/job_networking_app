@@ -33,10 +33,12 @@ class _MenuScreenState extends State<MenuScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: appbackgroundColor,
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: appbackgroundColor,
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Image.asset(

@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:job_networking_app/constants/color_constants.dart';
 import 'package:job_networking_app/details_screens/job_details_screen.dart';
+import 'package:job_networking_app/menu_screen/job_screen.dart';
+import 'package:job_networking_app/menu_screen/map_screen.dart';
 import 'package:job_networking_app/menu_screen/notification_screen.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -16,6 +18,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: appbackgroundColor,
       body: SafeArea(
           child: SingleChildScrollView(
             child: Column(
@@ -74,7 +77,16 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: Row(
                         children: [
                           SizedBox(width: 10,),
-                          Icon(Icons.search,size: 26,),
+                          GestureDetector(
+                              onTap: (){
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => MapScreen(),
+                                  ),
+                                );
+                              },
+                              child: Icon(Icons.search,size: 26,)),
                           SizedBox(width: 10,),
                           Container(
                               width: MediaQuery.of(context).size.width/1.6,
@@ -253,8 +265,19 @@ class _HomeScreenState extends State<HomeScreen> {
                             Text('Popular Jobs',style: TextStyle(fontSize: 16,
                                 fontWeight: FontWeight.w700,color: appTextColor),),
                             Spacer(),
-                            Text('See all',style: TextStyle(fontSize: 14,
-                                fontWeight: FontWeight.w600,color: appTextColor),),
+                            GestureDetector(
+                              onTap: (){
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) =>
+                                    JobScreen(),
+                                  ),
+                                );
+                              },
+                              child: Text('See all',style: TextStyle(fontSize: 14,
+                                  fontWeight: FontWeight.w600,color: appTextColor),),
+                            ),
                           ],
                         ),
                       ),

@@ -21,6 +21,7 @@ class _CreateProfileScreen4State extends State<CreateProfileScreen4> {
     double screenHeight = screenSize.height;
 
     return Scaffold(
+      backgroundColor: appbackgroundColor,
       body: SingleChildScrollView(
         padding: EdgeInsets.symmetric(
             horizontal: screenWidth * 0.05, vertical: 20),
@@ -36,11 +37,7 @@ class _CreateProfileScreen4State extends State<CreateProfileScreen4> {
                 },
                 child: Row(
                   children: [
-                    Icon(Icons.arrow_back_ios_new_rounded,size: 24,),
-                    Text(
-                        'Back',
-                        style: const TextStyle(fontWeight: FontWeight.bold)
-                    ),
+                    Icon(Icons.arrow_back_outlined,size: 24,),
                   ],
                 ),
               ),
@@ -104,6 +101,12 @@ class _CreateProfileScreen4State extends State<CreateProfileScreen4> {
                 ),
                 SizedBox(width: 10,),
                 Container(child: Image.asset('assets/icons/green_tick.png',height: 20,width: 20,)),
+              ],
+            ),
+            Row(
+              children: [
+                Text('Profile Completed',
+                  style: TextStyle(fontSize: 16, color: appProgressBarColor,fontWeight: FontWeight.w400),),
               ],
             ),
             SizedBox(height: screenHeight * 0.030),

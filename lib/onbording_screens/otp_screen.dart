@@ -39,6 +39,7 @@ class _OtpPageState extends State<OtpPage> {
     );
 
     return Scaffold(
+      backgroundColor: appbackgroundColor,
       body: SingleChildScrollView(
         padding: EdgeInsets.symmetric(
             horizontal: screenWidth * 0.05, vertical: 20),
@@ -54,11 +55,7 @@ class _OtpPageState extends State<OtpPage> {
                   },
                   child: Row(
                     children: [
-                       Icon(Icons.arrow_back_ios_new_rounded,size: 24,),
-                    Text(
-                          'Back',
-                        style: const TextStyle(fontWeight: FontWeight.bold)
-                    ),
+                       Icon(Icons.arrow_back_outlined,size: 24,),
                     ],
                   ),
                 ),

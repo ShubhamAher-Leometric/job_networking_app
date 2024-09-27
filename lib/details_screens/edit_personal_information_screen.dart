@@ -18,6 +18,7 @@ class _EditPersonalInformationScreenState extends State<EditPersonalInformationS
     double screenWidth = screenSize.width;
     double screenHeight = screenSize.height;
     return Scaffold(
+      backgroundColor: appbackgroundColor,
       body: Center(
         child: Padding(
           padding: EdgeInsets.symmetric(
@@ -32,7 +33,7 @@ class _EditPersonalInformationScreenState extends State<EditPersonalInformationS
                     Navigator.pop(context);},
                   child: Row(
                     children: [
-                      Icon(Icons.arrow_back_ios_new_rounded,size: 24,),
+                      Icon(Icons.arrow_back_outlined,size: 24,),
                       Spacer(),
                       Text(
                           'Personal Information',

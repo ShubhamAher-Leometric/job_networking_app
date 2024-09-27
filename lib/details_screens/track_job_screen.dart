@@ -18,21 +18,22 @@ class _TrackJobScreenState extends State<TrackJobScreen> {
     double screenHeight = screenSize.height;
     double titleFontSize = screenWidth * 0.08;
     return Scaffold(
+      backgroundColor: appbackgroundColor,
       appBar: AppBar(
+        backgroundColor: appbackgroundColor,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back_ios_new_rounded),
+          icon: Icon(Icons.arrow_back_outlined),
           onPressed: () {
             Navigator.pop(context);
           },
         ),
         title: Text(
           'My Application Status',
-            style: const TextStyle(fontWeight: FontWeight.bold)
+            style: const TextStyle(fontWeight: FontWeight.w600,fontSize: 16)
         ),
         centerTitle: true,
       ),
       body: SingleChildScrollView(
-
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20.0),
           child: Center(
@@ -41,7 +42,7 @@ class _TrackJobScreenState extends State<TrackJobScreen> {
               children: [
                 Container(
                   decoration: BoxDecoration(
-                      color: appTextColor3.withOpacity(0.2),
+                      color: appcardColor,
                       borderRadius: BorderRadius.circular(15)
                   ),
                   child: Padding(
@@ -106,7 +107,7 @@ class _TrackJobScreenState extends State<TrackJobScreen> {
                 SizedBox(height: 10,),
                 Container(
                   decoration: BoxDecoration(
-                      color: appTextColor3.withOpacity(0.2),
+                      color: appcardColor,
                       borderRadius: BorderRadius.circular(15)
                   ),
                   child: Padding(
@@ -171,7 +172,7 @@ class _TrackJobScreenState extends State<TrackJobScreen> {
                 SizedBox(height: 10,),
                 Container(
                   decoration: BoxDecoration(
-                      color: appTextColor3.withOpacity(0.2),
+                      color: appcardColor,
                       borderRadius: BorderRadius.circular(15)
                   ),
                   child: Padding(

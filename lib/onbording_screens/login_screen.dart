@@ -27,6 +27,7 @@ class _LoginPageState extends State<LoginPage> {
     double titleFontSize = screenWidth * 0.08;
 
     return Scaffold(
+      backgroundColor: appbackgroundColor,
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 10.0),
