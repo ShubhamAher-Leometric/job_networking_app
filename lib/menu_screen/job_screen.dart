@@ -59,7 +59,7 @@ class _JobScreenState extends State<JobScreen> with SingleTickerProviderStateMix
                       Spacer(),
                       Text(
                           'My Jobs',
-                          style: const TextStyle(fontWeight: FontWeight.w600,fontSize: 16)
+                          style: const TextStyle(fontWeight: FontWeight.w600,fontSize: 18)
                       ),
                       Spacer(),
                       Image.asset('assets/icons/filter.png',height: 24,width: 24,)
@@ -298,7 +298,6 @@ class _JobScreenState extends State<JobScreen> with SingleTickerProviderStateMix
                                   ),
                                 ),
                                 SizedBox(width: 10,),
-
                                 Container(
                                   decoration: BoxDecoration(
                                       color: appbackgroundColor,
@@ -326,10 +325,10 @@ class _JobScreenState extends State<JobScreen> with SingleTickerProviderStateMix
                             children: [
                               Container(
                                 height: 40,
-                                width: 150,
+                                width: 100,
                                 decoration: BoxDecoration(
                                     color: appsecondaryColor,
-                                    borderRadius: BorderRadius.circular(10)
+                                    borderRadius: BorderRadius.circular(5)
                                 ),
                                 child: Center(child: Text('Apply Now',style: TextStyle(fontSize: 14,fontWeight: FontWeight.w600,color: appbackgroundColor),)),
                               )
@@ -449,12 +448,13 @@ class _JobScreenState extends State<JobScreen> with SingleTickerProviderStateMix
                             children: [
                               Container(
                                 height: 40,
-                                width: 150,
+                                width: 100,
                                 decoration: BoxDecoration(
                                     color: appsecondaryColor,
-                                    borderRadius: BorderRadius.circular(10)
+                                    borderRadius: BorderRadius.circular(5)
                                 ),
-                                child: Center(child: Text('Apply Now',style: TextStyle(fontSize: 14,fontWeight: FontWeight.w600,color: appbackgroundColor),)),
+                                child: Center(child: Text('Apply Now',
+                                  style: TextStyle(fontSize: 14,fontWeight: FontWeight.w600,color: appbackgroundColor),)),
                               )
                             ],
                           ),
@@ -587,10 +587,10 @@ class _JobScreenState extends State<JobScreen> with SingleTickerProviderStateMix
                             children: [
                               Container(
                                 height: 40,
-                                width: 150,
+                                width: 100,
                                 decoration: BoxDecoration(
                                     color: appsecondaryColor,
-                                    borderRadius: BorderRadius.circular(10)
+                                    borderRadius: BorderRadius.circular(5)
                                 ),
                                 child: Center(child: Text('Apply Now',style: TextStyle(fontSize: 14,fontWeight: FontWeight.w600,color: appbackgroundColor),)),
                               )

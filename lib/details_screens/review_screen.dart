@@ -41,7 +41,7 @@ class _ReviewScreenState extends State<ReviewScreen> {
                       children: [
                         Icon(Icons.arrow_back_outlined),
                         Spacer(),
-                        Text('Add Review',style: TextStyle(fontWeight: FontWeight.w700,fontSize: 16),),
+                        Text('Add Review',style: TextStyle(fontWeight: FontWeight.w700,fontSize: 18),),
                         Spacer(),
                        SizedBox(width: 20,)
                       ],

@@ -39,7 +39,7 @@ class _MessagesScreenState extends State<MessagesScreen> {
                       Spacer(),
                       Text(
                           'Messages',
-                          style: const TextStyle(fontWeight: FontWeight.w600,fontSize: 16)
+                          style: const TextStyle(fontWeight: FontWeight.w600,fontSize: 18)
                       ),
                       Spacer(),
                       GestureDetector(

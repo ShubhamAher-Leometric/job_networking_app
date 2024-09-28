@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:job_networking_app/constants/color_constants.dart';
 import 'package:job_networking_app/onbording_screens/slider_screen.dart';
+import 'package:job_networking_app/slider_screens/slider_screen_1.dart';
 
 import '../constants/custom_elevated_button.dart';
 
@@ -122,7 +123,7 @@ class _LookingForScreenState extends State<LookingForScreen> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => SliderScreen(),
+                          builder: (context) => SliderScreen1(),
                         ),
                       );
                     }, title: 'Continue'),

@@ -4,6 +4,7 @@ import 'package:job_networking_app/details_screens/track_job_screen.dart';
 
 import '../constants/color_constants.dart';
 import '../constants/custom_elevated_button.dart';
+import '../menu_screen.dart';
 
 class JobApplySucessScreen extends StatefulWidget {
   const JobApplySucessScreen({super.key});
@@ -78,7 +79,14 @@ class _JobApplySucessScreenState extends State<JobApplySucessScreen> {
                   child: Container(
                     height: 56,
                     child: ElevatedButton(
-                      onPressed: (){},
+                      onPressed: (){
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => MenuScreen(),
+                          ),
+                        );
+                      },
                       style: ButtonStyle(
                         backgroundColor: WidgetStateProperty.all(appbackgroundColor),
                         elevation: WidgetStateProperty.all(0),

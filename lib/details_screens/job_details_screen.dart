@@ -78,7 +78,7 @@ class _JobDetailsScreenState extends State<JobDetailsScreen> with SingleTickerPr
                       Text(
                         'Warehouse Packer',
                         style: TextStyle(
-                            fontSize: 16, fontWeight: FontWeight.w600, color: appTextColor),
+                            fontSize: 20, fontWeight: FontWeight.w700, color: appTextColor),
                       ),
                       SizedBox(height: 10),
                       Text(

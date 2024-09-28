@@ -36,7 +36,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           Spacer(),
                           Text(
                               'My profile',
-                              style: const TextStyle(fontWeight: FontWeight.w600,fontSize: 16)
+                              style: const TextStyle(fontWeight: FontWeight.w600,fontSize: 18)
                           ),
                           Spacer(),
                           SizedBox(height: 24,width: 24,)

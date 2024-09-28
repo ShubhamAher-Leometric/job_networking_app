@@ -66,7 +66,7 @@ class _ApplyNowScreenState extends State<ApplyNowScreen> {
                       focusedBorder: OutlineInputBorder(
                         borderSide: BorderSide(color: appTextfilledColor),
                       ),
-                      labelText: 'Fill Name',
+                      labelText: 'Full Name',
                       hintText: 'Haley Jessica',
                       labelStyle: TextStyle(color: appTextfilledColor)
                   ),

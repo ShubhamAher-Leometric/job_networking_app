@@ -37,7 +37,7 @@ class _NewMessageScreenState extends State<NewMessageScreen> {
                       Spacer(),
                       Text(
                           'New Messages',
-                          style: const TextStyle(fontWeight: FontWeight.w600,fontSize: 16)
+                          style: const TextStyle(fontWeight: FontWeight.w600,fontSize: 18)
                       ),
                       Spacer(),
                       Container(height: 24,width: 24,)

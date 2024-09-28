@@ -65,7 +65,7 @@ class _SliderScreenState extends State<SliderScreen> {
                   Image.asset(
                 'assets/images/Walkthrough 1.png',
                 fit: BoxFit.cover,
-                height: 250,
+                height: MediaQuery.of(context).size.height/2,
               ),
                   SizedBox(height: 20),
                   Container(

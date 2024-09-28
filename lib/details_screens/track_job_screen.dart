@@ -29,7 +29,7 @@ class _TrackJobScreenState extends State<TrackJobScreen> {
         ),
         title: Text(
           'My Application Status',
-            style: const TextStyle(fontWeight: FontWeight.w600,fontSize: 16)
+            style: const TextStyle(fontWeight: FontWeight.w600,fontSize: 18)
         ),
         centerTitle: true,
       ),

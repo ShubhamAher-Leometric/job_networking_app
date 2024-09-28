@@ -44,7 +44,7 @@ class _ChatScreenState extends State<ChatScreen> {
                         Spacer(),
                         Text(
                             'Jens Kidman',
-                            style: const TextStyle(fontWeight: FontWeight.w400,fontSize: 16)
+                            style: const TextStyle(fontWeight: FontWeight.w400,fontSize: 18)
                         ),
                         Spacer(),
                         GestureDetector(

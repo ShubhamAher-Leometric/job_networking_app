@@ -37,7 +37,7 @@ class _EditWorkHistoryState extends State<EditWorkHistory> {
                       Spacer(),
                       Text(
                           'Work history',
-                          style: const TextStyle(fontWeight: FontWeight.w600,fontSize: 16)
+                          style: const TextStyle(fontWeight: FontWeight.w600,fontSize: 18)
                       ),
                       Spacer(),
                       SizedBox(width: 24,),
@@ -116,7 +116,7 @@ class _EditWorkHistoryState extends State<EditWorkHistory> {
               ),
               SizedBox(height: screenHeight * 0.030),
               Container(
-                height: screenHeight * 0.08,
+                height: 56,
                 child: ElevatedButton(
                   onPressed: (){},
                   style: ButtonStyle(
@@ -147,7 +147,7 @@ class _EditWorkHistoryState extends State<EditWorkHistory> {
               }, title: 'Save'),
               SizedBox(height: screenHeight * 0.030),
               Container(
-                height: screenHeight * 0.08,
+                height: 56,
                 child: ElevatedButton(
                   onPressed: (){},
                   style: ButtonStyle(

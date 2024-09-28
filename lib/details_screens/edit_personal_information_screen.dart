@@ -37,7 +37,7 @@ class _EditPersonalInformationScreenState extends State<EditPersonalInformationS
                       Spacer(),
                       Text(
                           'Personal Information',
-                          style: const TextStyle(fontWeight: FontWeight.w600,fontSize: 16)
+                          style: const TextStyle(fontWeight: FontWeight.w600,fontSize: 18)
                       ),
                       Spacer(),
                       SizedBox(width: 24,),
@@ -126,7 +126,7 @@ class _EditPersonalInformationScreenState extends State<EditPersonalInformationS
               }, title: 'Save'),
               SizedBox(height: screenHeight * 0.030),
               Container(
-                height: screenHeight * 0.08,
+                height: 56,
                 child: ElevatedButton(
                   onPressed: (){},
                   style: ButtonStyle(

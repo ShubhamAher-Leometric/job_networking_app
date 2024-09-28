@@ -37,7 +37,7 @@ class _ResumeUploadScreenState extends State<ResumeUploadScreen> {
                       Spacer(),
                       Text(
                           'Resume Upload',
-                          style: const TextStyle(fontWeight: FontWeight.w600,fontSize: 16)
+                          style: const TextStyle(fontWeight: FontWeight.w600,fontSize: 18)
                       ),
                       Spacer(),
                       SizedBox(width: 24,),

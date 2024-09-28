@@ -40,7 +40,7 @@ class _ProfileOverviewScreenState extends State<ProfileOverviewScreen> {
                       Spacer(),
                       Text(
                           'Profile Overview',
-                          style: const TextStyle(fontWeight: FontWeight.w600,fontSize: 16)
+                          style: const TextStyle(fontWeight: FontWeight.w600,fontSize: 18)
                       ),
                       Spacer(),
                       SizedBox(width: 24,),

@@ -181,7 +181,7 @@ class _CreateProfileScreen4State extends State<CreateProfileScreen4> {
                   text: TextSpan(
                     children: [
                       TextSpan(
-                        text: "I agree to the app’s terms, conditions, and privacy policy",
+                        text: "I agree to the app’s terms, conditions, and \nprivacy policy",
                         style: TextStyle(color: Colors.black),
                       ),
                       // TextSpan(

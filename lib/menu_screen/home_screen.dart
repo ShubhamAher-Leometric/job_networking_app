@@ -314,7 +314,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             Container(
-                              width: MediaQuery.of(context).size.width/1-140,
+                              width: MediaQuery.of(context).size.width/1-130,
                               child: Row(
                                 children: [
                                   Text('House Cleaner',style: TextStyle(fontSize: 16,
@@ -342,6 +342,48 @@ class _HomeScreenState extends State<HomeScreen> {
                             ),
                           ],
                         )
+                      ],
+                    ),
+                    SizedBox(height: 10,),
+                    Row(
+                      children: [
+                        Container(
+                          // height: 30,
+                          decoration: BoxDecoration(
+                              color: appbackgroundColor,
+                              borderRadius: BorderRadius.circular(15)
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 5.0,vertical: 3),
+                            child: Row(
+                              children: [
+                                Text('5pm - 9pm',style: TextStyle(fontSize: 12,
+                                    fontWeight: FontWeight.w400,color: appTextColor2),),
+                              ],
+                            ),
+                          ),
+                        ),
+                        SizedBox(width: 10,),
+                        Container(
+                          decoration: BoxDecoration(
+                              color: appbackgroundColor,
+                              borderRadius: BorderRadius.circular(15)
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 5.0,vertical: 3),
+                            child: Row(
+                              children: [
+                                Text('Part-Time',style: TextStyle(fontSize: 12,
+                                    fontWeight: FontWeight.w400,color: appTextColor2),),
+                              ],
+                            ),
+                          ),
+                        ),
+                        Spacer(),
+                        Text('\$18/per hr',
+                          style: TextStyle(fontWeight: FontWeight.w700,
+                              fontSize: 16),),
+                        SizedBox(width: 10,),
                       ],
                     ),
                   ],
@@ -525,10 +567,10 @@ class _HomeScreenState extends State<HomeScreen> {
                                 children: [
                                   Container(
                                     height: 40,
-                                    width: 150,
+                                    width: 100,
                                     decoration: BoxDecoration(
                                         color: appsecondaryColor,
-                                        borderRadius: BorderRadius.circular(15)
+                                        borderRadius: BorderRadius.circular(5)
                                     ),
                                     child: Center(child: Text('Apply Now',style: TextStyle(fontSize: 14,fontWeight: FontWeight.w600,color: appbackgroundColor),)),
                                   )
