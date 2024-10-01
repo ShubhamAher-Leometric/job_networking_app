@@ -70,7 +70,7 @@ class _JobScreenState extends State<JobScreen> with SingleTickerProviderStateMix
               Container(
                 decoration: BoxDecoration(
                     color: appcardColor,
-                    borderRadius: BorderRadius.circular(15)
+                    borderRadius: BorderRadius.circular(10)
                 ),
                 child: Row(
                   children: [
@@ -225,10 +225,10 @@ class _JobScreenState extends State<JobScreen> with SingleTickerProviderStateMix
         SizedBox(height: 10,),
         ClipRRect(
           borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(30.0),
-            topRight: Radius.circular(30.0),
-            bottomRight: Radius.circular(30.0),
-            bottomLeft: Radius.circular(30.0),
+            topLeft: Radius.circular(10.0),
+            topRight: Radius.circular(10.0),
+            bottomRight: Radius.circular(10.0),
+            bottomLeft: Radius.circular(10.0),
           ),
           child: Container(
             color: appcardColor,
@@ -281,6 +281,7 @@ class _JobScreenState extends State<JobScreen> with SingleTickerProviderStateMix
                             width: MediaQuery.of(context).size.width/1-110,
                             child: Row(
                               children: [
+                                SizedBox(width: 10,),
                                 Container(
                                   // height: 30,
                                   decoration: BoxDecoration(
@@ -323,6 +324,7 @@ class _JobScreenState extends State<JobScreen> with SingleTickerProviderStateMix
                           SizedBox(height: 10,),
                           Row(
                             children: [
+                              SizedBox(width: 10,),
                               Container(
                                 height: 40,
                                 width: 100,
@@ -347,10 +349,10 @@ class _JobScreenState extends State<JobScreen> with SingleTickerProviderStateMix
         SizedBox(height: 10,),
         ClipRRect(
           borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(30.0),
-            topRight: Radius.circular(30.0),
-            bottomRight: Radius.circular(30.0),
-            bottomLeft: Radius.circular(30.0),
+            topLeft: Radius.circular(10.0),
+            topRight: Radius.circular(10.0),
+            bottomRight: Radius.circular(10.0),
+            bottomLeft: Radius.circular(10.0),
           ),
           child: Container(
             color: appcardColor,
@@ -377,7 +379,7 @@ class _JobScreenState extends State<JobScreen> with SingleTickerProviderStateMix
                             child: Row(
                               children: [
                                 SizedBox(width: 10,),
-                                Text('Delivery Driver',style: TextStyle(fontSize: 16,
+                                Text('Warehouse Packer',style: TextStyle(fontSize: 16,
                                     fontWeight: FontWeight.w600,color: appTextColor),),
                                 Spacer(),
                                 Image.asset('assets/icons/close.png',height: 20,width: 20,),
@@ -403,6 +405,7 @@ class _JobScreenState extends State<JobScreen> with SingleTickerProviderStateMix
                             width: MediaQuery.of(context).size.width/1-110,
                             child: Row(
                               children: [
+                                SizedBox(width: 10,),
                                 Container(
                                   // height: 30,
                                   decoration: BoxDecoration(
@@ -436,7 +439,6 @@ class _JobScreenState extends State<JobScreen> with SingleTickerProviderStateMix
                                   ),
                                 ),
                                 SizedBox(width: 10,),
-
                                 Text('\$18/per hr',
                                   style: TextStyle(fontWeight: FontWeight.w700,
                                       fontSize: 12),),
@@ -446,6 +448,7 @@ class _JobScreenState extends State<JobScreen> with SingleTickerProviderStateMix
                           SizedBox(height: 10,),
                           Row(
                             children: [
+                              SizedBox(width: 10,),
                               Container(
                                 height: 40,
                                 width: 100,
@@ -453,8 +456,7 @@ class _JobScreenState extends State<JobScreen> with SingleTickerProviderStateMix
                                     color: appsecondaryColor,
                                     borderRadius: BorderRadius.circular(5)
                                 ),
-                                child: Center(child: Text('Apply Now',
-                                  style: TextStyle(fontSize: 14,fontWeight: FontWeight.w600,color: appbackgroundColor),)),
+                                child: Center(child: Text('Apply Now',style: TextStyle(fontSize: 14,fontWeight: FontWeight.w600,color: appbackgroundColor),)),
                               )
                             ],
                           ),
@@ -487,10 +489,10 @@ class _JobScreenState extends State<JobScreen> with SingleTickerProviderStateMix
         SizedBox(height: 10,),
         ClipRRect(
           borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(30.0),
-            topRight: Radius.circular(30.0),
-            bottomRight: Radius.circular(30.0),
-            bottomLeft: Radius.circular(30.0),
+            topLeft: Radius.circular(10.0),
+            topRight: Radius.circular(10.0),
+            bottomRight: Radius.circular(10.0),
+            bottomLeft: Radius.circular(10.0),
           ),
           child: Container(
             color: appcardColor,
@@ -543,6 +545,8 @@ class _JobScreenState extends State<JobScreen> with SingleTickerProviderStateMix
                             width: MediaQuery.of(context).size.width/1-110,
                             child: Row(
                               children: [
+                                SizedBox(width: 10,),
+
                                 Container(
                                   // height: 30,
                                   decoration: BoxDecoration(
@@ -585,6 +589,8 @@ class _JobScreenState extends State<JobScreen> with SingleTickerProviderStateMix
                           SizedBox(height: 10,),
                           Row(
                             children: [
+                              SizedBox(width: 10,),
+
                               Container(
                                 height: 40,
                                 width: 100,
@@ -625,10 +631,10 @@ class _JobScreenState extends State<JobScreen> with SingleTickerProviderStateMix
         SizedBox(height: 10,),
         ClipRRect(
           borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(30.0),
-            topRight: Radius.circular(30.0),
-            bottomRight: Radius.circular(30.0),
-            bottomLeft: Radius.circular(30.0),
+            topLeft: Radius.circular(10.0),
+            topRight: Radius.circular(10.0),
+            bottomRight: Radius.circular(10.0),
+            bottomLeft: Radius.circular(10.0),
           ),
           child: Container(
             color: appcardColor,
@@ -681,6 +687,8 @@ class _JobScreenState extends State<JobScreen> with SingleTickerProviderStateMix
                             width: MediaQuery.of(context).size.width/1-110,
                             child: Row(
                               children: [
+                                SizedBox(width: 10,),
+
                                 Container(
                                   // height: 30,
                                   decoration: BoxDecoration(
@@ -723,6 +731,8 @@ class _JobScreenState extends State<JobScreen> with SingleTickerProviderStateMix
                           SizedBox(height: 10,),
                           Row(
                             children: [
+                              SizedBox(width: 10,),
+
                               Center(child: Text('Applied 1mo ago',style: TextStyle(fontSize: 13,fontWeight: FontWeight.w600,color: appTextColor2),))
                             ],
                           ),
@@ -738,10 +748,10 @@ class _JobScreenState extends State<JobScreen> with SingleTickerProviderStateMix
         SizedBox(height: 10,),
         ClipRRect(
           borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(30.0),
-            topRight: Radius.circular(30.0),
-            bottomRight: Radius.circular(30.0),
-            bottomLeft: Radius.circular(30.0),
+            topLeft: Radius.circular(10.0),
+            topRight: Radius.circular(10.0),
+            bottomRight: Radius.circular(10.0),
+            bottomLeft: Radius.circular(10.0),
           ),
           child: Container(
             color: appcardColor,
@@ -794,6 +804,8 @@ class _JobScreenState extends State<JobScreen> with SingleTickerProviderStateMix
                             width: MediaQuery.of(context).size.width/1-110,
                             child: Row(
                               children: [
+                                SizedBox(width: 10,),
+
                                 Container(
                                   // height: 30,
                                   decoration: BoxDecoration(
@@ -836,6 +848,8 @@ class _JobScreenState extends State<JobScreen> with SingleTickerProviderStateMix
                           SizedBox(height: 10,),
                           Row(
                             children: [
+                              SizedBox(width: 10,),
+
                               Center(child: Text('Applied 1mo ago',style: TextStyle(fontSize: 13,fontWeight: FontWeight.w600,color: appTextColor2),))
                             ],
                           ),

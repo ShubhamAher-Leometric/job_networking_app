@@ -43,7 +43,7 @@ class _TrackJobScreenState extends State<TrackJobScreen> {
                 Container(
                   decoration: BoxDecoration(
                       color: appcardColor,
-                      borderRadius: BorderRadius.circular(15)
+                      borderRadius: BorderRadius.circular(10)
                   ),
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
@@ -59,7 +59,7 @@ class _TrackJobScreenState extends State<TrackJobScreen> {
                                     borderRadius: BorderRadius.circular(15)
                                 ),
                               child: Padding(
-                                padding: const EdgeInsets.all(5.0),
+                                padding: const EdgeInsets.symmetric(horizontal: 10.0,vertical: 3),
                                 child: Text('Pending',style: TextStyle(fontWeight: FontWeight.w400,fontSize: 12),),
                               ),
                               )
@@ -67,22 +67,22 @@ class _TrackJobScreenState extends State<TrackJobScreen> {
                         ),
                         Row(
                           children: [
-                            Text('Urbanclick',style: TextStyle(fontSize: 14,fontWeight: FontWeight.w400,color: appTextColor2),),
+                            Text('Urbanclick',style: TextStyle(fontSize: 14,fontWeight: FontWeight.w400,color: appTextColor5),),
                           ],
                         ),
                         Row(
                           children: [
-                            Text('Geneva, Switzerland',style: TextStyle(fontSize: 14,fontWeight: FontWeight.w400,color: appTextColor2),),
+                            Text('Geneva, Switzerland',style: TextStyle(fontSize: 14,fontWeight: FontWeight.w400,color: appTextColor6),),
                           ],
                         ),
                         Row(
                           children: [
-                            Text('Applied on: 15th September, 2024',style: TextStyle(fontSize: 14,fontWeight: FontWeight.w400,color: appTextColor2),),
+                            Text('Applied on: 15th September, 2024',style: TextStyle(fontSize: 14,fontWeight: FontWeight.w400,color: appTextColor7),),
                           ],
                         ),
                         Row(
                           children: [
-                            Text('Salary: \$15/hour',style: TextStyle(fontSize: 14,fontWeight: FontWeight.w400,color: appTextColor2),),
+                            Text('Salary: \$15/hour',style: TextStyle(fontSize: 14,fontWeight: FontWeight.w400,color: appTextColor7),),
                           ],
                         ),
                         SizedBox(height:10,),
@@ -94,12 +94,13 @@ class _TrackJobScreenState extends State<TrackJobScreen> {
                                   borderRadius: BorderRadius.circular(10)
                               ),
                               child: Padding(
-                                padding: const EdgeInsets.symmetric(horizontal: 20.0,vertical: 10),
+                                padding: const EdgeInsets.symmetric(horizontal: 15.0,vertical: 10),
                                 child: Text('Chat with Employer',style: TextStyle(fontWeight: FontWeight.w600,fontSize: 14,color: appbackgroundColor),),
                               ),
                             ),
                           ],
-                        )
+                        ),
+                        SizedBox(height:5,),
                       ],
                     ),
                   ),
@@ -108,7 +109,7 @@ class _TrackJobScreenState extends State<TrackJobScreen> {
                 Container(
                   decoration: BoxDecoration(
                       color: appcardColor,
-                      borderRadius: BorderRadius.circular(15)
+                      borderRadius: BorderRadius.circular(10)
                   ),
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
@@ -124,7 +125,7 @@ class _TrackJobScreenState extends State<TrackJobScreen> {
                                   borderRadius: BorderRadius.circular(15)
                               ),
                               child: Padding(
-                                padding: const EdgeInsets.all(5.0),
+                                padding: const EdgeInsets.symmetric(horizontal: 10.0,vertical: 3),
                                 child: Text('Pending',style: TextStyle(fontWeight: FontWeight.w400,fontSize: 12),),
                               ),
                             )
@@ -132,22 +133,22 @@ class _TrackJobScreenState extends State<TrackJobScreen> {
                         ),
                         Row(
                           children: [
-                            Text('Urbanclick',style: TextStyle(fontSize: 14,fontWeight: FontWeight.w400,color: appTextColor2),),
+                            Text('Urbanclick',style: TextStyle(fontSize: 14,fontWeight: FontWeight.w400,color: appTextColor5),),
                           ],
                         ),
                         Row(
                           children: [
-                            Text('Geneva, Switzerland',style: TextStyle(fontSize: 14,fontWeight: FontWeight.w400,color: appTextColor2),),
+                            Text('Geneva, Switzerland',style: TextStyle(fontSize: 14,fontWeight: FontWeight.w400,color: appTextColor6),),
                           ],
                         ),
                         Row(
                           children: [
-                            Text('Applied on: 15th September, 2024',style: TextStyle(fontSize: 14,fontWeight: FontWeight.w400,color: appTextColor2),),
+                            Text('Applied on: 15th September, 2024',style: TextStyle(fontSize: 14,fontWeight: FontWeight.w400,color: appTextColor7),),
                           ],
                         ),
                         Row(
                           children: [
-                            Text('Salary: \$15/hour',style: TextStyle(fontSize: 14,fontWeight: FontWeight.w400,color: appTextColor2),),
+                            Text('Salary: \$15/hour',style: TextStyle(fontSize: 14,fontWeight: FontWeight.w400,color: appTextColor7),),
                           ],
                         ),
                         SizedBox(height:10,),
@@ -159,12 +160,13 @@ class _TrackJobScreenState extends State<TrackJobScreen> {
                                   borderRadius: BorderRadius.circular(10)
                               ),
                               child: Padding(
-                                padding: const EdgeInsets.symmetric(horizontal: 20.0,vertical: 10),
+                                padding: const EdgeInsets.symmetric(horizontal: 15.0,vertical: 10),
                                 child: Text('Chat with Employer',style: TextStyle(fontWeight: FontWeight.w600,fontSize: 14,color: appbackgroundColor),),
                               ),
                             ),
                           ],
-                        )
+                        ),
+                        SizedBox(height:5,),
                       ],
                     ),
                   ),
@@ -173,7 +175,7 @@ class _TrackJobScreenState extends State<TrackJobScreen> {
                 Container(
                   decoration: BoxDecoration(
                       color: appcardColor,
-                      borderRadius: BorderRadius.circular(15)
+                      borderRadius: BorderRadius.circular(10)
                   ),
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
@@ -186,10 +188,10 @@ class _TrackJobScreenState extends State<TrackJobScreen> {
                             Container(
                               decoration: BoxDecoration(
                                   color: appPrimaryColor,
-                                  borderRadius: BorderRadius.circular(15)
+                                  borderRadius: BorderRadius.circular(10)
                               ),
                               child: Padding(
-                                padding: const EdgeInsets.all(5.0),
+                                padding: const EdgeInsets.symmetric(horizontal: 10.0,vertical: 3),
                                 child: Text('Pending',style: TextStyle(fontWeight: FontWeight.w400,fontSize: 12),),
                               ),
                             )
@@ -197,22 +199,22 @@ class _TrackJobScreenState extends State<TrackJobScreen> {
                         ),
                         Row(
                           children: [
-                            Text('Urbanclick',style: TextStyle(fontSize: 14,fontWeight: FontWeight.w400,color: appTextColor2),),
+                            Text('Urbanclick',style: TextStyle(fontSize: 14,fontWeight: FontWeight.w400,color: appTextColor5),),
                           ],
                         ),
                         Row(
                           children: [
-                            Text('Geneva, Switzerland',style: TextStyle(fontSize: 14,fontWeight: FontWeight.w400,color: appTextColor2),),
+                            Text('Geneva, Switzerland',style: TextStyle(fontSize: 14,fontWeight: FontWeight.w400,color: appTextColor6),),
                           ],
                         ),
                         Row(
                           children: [
-                            Text('Applied on: 15th September, 2024',style: TextStyle(fontSize: 14,fontWeight: FontWeight.w400,color: appTextColor2),),
+                            Text('Applied on: 15th September, 2024',style: TextStyle(fontSize: 14,fontWeight: FontWeight.w400,color: appTextColor7),),
                           ],
                         ),
                         Row(
                           children: [
-                            Text('Salary: \$15/hour',style: TextStyle(fontSize: 14,fontWeight: FontWeight.w400,color: appTextColor2),),
+                            Text('Salary: \$15/hour',style: TextStyle(fontSize: 14,fontWeight: FontWeight.w400,color: appTextColor7),),
                           ],
                         ),
                         SizedBox(height:10,),
@@ -229,7 +231,9 @@ class _TrackJobScreenState extends State<TrackJobScreen> {
                               ),
                             ),
                           ],
-                        )
+                        ),
+                        SizedBox(height:5,),
+
                       ],
                     ),
                   ),
