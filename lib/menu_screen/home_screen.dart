@@ -286,10 +286,10 @@ class _HomeScreenState extends State<HomeScreen> {
           padding: const EdgeInsets.symmetric(horizontal: 20.0),
           child: ClipRRect(
             borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(30.0),
-              topRight: Radius.circular(30.0),
-              bottomRight: Radius.circular(30.0),
-              bottomLeft: Radius.circular(30.0),
+              topLeft: Radius.circular(10.0),
+              topRight: Radius.circular(10.0),
+              bottomRight: Radius.circular(10.0),
+              bottomLeft: Radius.circular(10.0),
             ),
             child: Container(
               color: appTextColor2.withOpacity(0.1),
@@ -305,6 +305,8 @@ class _HomeScreenState extends State<HomeScreen> {
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             Image.asset('assets/temp_images/Logo Container (1).png',height: 70,width: 70,)
                           ],
@@ -325,19 +327,19 @@ class _HomeScreenState extends State<HomeScreen> {
                             Row(
                               children: [
                                 Text('Sparkle',style: TextStyle(fontSize: 14,
-                                    fontWeight: FontWeight.w500,color: appTextColor2),),
+                                    fontWeight: FontWeight.w500,color: appTextColor5),),
                               ],
                             ),
                             Row(
                               children: [
                                 Text('Geneva, Switzerland',style: TextStyle(fontSize: 14,
-                                    fontWeight: FontWeight.w500,color: appTextColor2),),
+                                    fontWeight: FontWeight.w500,color: appTextColor6),),
                               ],
                             ),
                             Row(
                               children: [
                                 Text('Date Posted: Sept 03, 2024',style: TextStyle(fontSize: 11,
-                                    fontWeight: FontWeight.w500,color: appTextColor2),),
+                                    fontWeight: FontWeight.w500,color: appTextColor6),),
                               ],
                             ),
                           ],
@@ -347,6 +349,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     SizedBox(height: 10,),
                     Row(
                       children: [
+                        SizedBox(width: 10,),
                         Container(
                           // height: 30,
                           decoration: BoxDecoration(
@@ -431,17 +434,17 @@ class _HomeScreenState extends State<HomeScreen> {
                 );
               },
               child: Container(
-                height: 250,
+                height: 230,
                 child: PageView.builder(
                   controller: pageController,
                   itemCount: numPages,
                   itemBuilder: (context, index) {
                     return ClipRRect(
                       borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(30.0),
-                        topRight: Radius.circular(30.0),
-                        bottomRight: Radius.circular(30.0),
-                        bottomLeft: Radius.circular(30.0),
+                        topLeft: Radius.circular(15.0),
+                        topRight: Radius.circular(15.0),
+                        bottomRight: Radius.circular(15.0),
+                        bottomLeft: Radius.circular(15.0),
                       ),
                       child: Container(
                        color: appPrimaryColor,
@@ -479,14 +482,14 @@ class _HomeScreenState extends State<HomeScreen> {
                                         children: [
                                           SizedBox(width: 10,),
                                           Text('BulkBuy',style: TextStyle(fontSize: 14,
-                                          fontWeight: FontWeight.w500,color: appTextColor2),),
+                                          fontWeight: FontWeight.w500,color: appTextColor5),),
                                         ],
                                       ),
                                       Row(
                                         children: [
                                           SizedBox(width: 10,),
                                           Text('Date Posted: Sept 03, 2024',style: TextStyle(fontSize: 11,
-                                              fontWeight: FontWeight.w500,color: appTextColor2),),
+                                              fontWeight: FontWeight.w500,color: appTextColor5),),
                                         ],
                                       ),
                                     ],
@@ -506,9 +509,9 @@ class _HomeScreenState extends State<HomeScreen> {
                                       padding: const EdgeInsets.symmetric(horizontal: 8.0),
                                       child: Row(
                                         children: [
-                                          Icon(Icons.contacts_outlined,color: appTextColor2),
+                                          Image.asset('assets/icons/calendar.png',height: 18,width: 18,),
                                           Text('Sept 12, 2024',style: TextStyle(fontSize: 12,
-                                              fontWeight: FontWeight.w400,color: appTextColor2),),
+                                              fontWeight: FontWeight.w400,color: appTextColor5),),
                                         ],
                                       ),
                                     ),
@@ -524,9 +527,9 @@ class _HomeScreenState extends State<HomeScreen> {
                                       padding: const EdgeInsets.symmetric(horizontal: 8.0),
                                       child: Row(
                                         children: [
-                                          Icon(Icons.access_time_rounded,color: appTextColor2),
+                                          Image.asset('assets/icons/clock.png',height: 18,width: 18,),
                                           Text('5 PM - 9 PM',style: TextStyle(fontSize: 12,
-                                              fontWeight: FontWeight.w400,color: appTextColor2),),
+                                              fontWeight: FontWeight.w400,color: appTextColor5),),
                                         ],
                                       ),
                                     ),
@@ -543,7 +546,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                       child: Row(
                                         children: [
                                           Text('Part-Time',style: TextStyle(fontSize: 12,
-                                              fontWeight: FontWeight.w400,color: appTextColor2),),
+                                              fontWeight: FontWeight.w400,color: appTextColor5),),
                                         ],
                                       ),
                                     ),
@@ -554,12 +557,12 @@ class _HomeScreenState extends State<HomeScreen> {
                               Row(
                                 children: [
                                   Text('\$20/per hr',
-                                    style: TextStyle(fontWeight: FontWeight.w700,
-                                      fontSize: 16),),
+                                    style: TextStyle(fontWeight: FontWeight.w700,color: appTextColor5,
+                                      fontSize: 14),),
                                   Spacer(),
                                   Text('Geneva, Switzerland',
-                                    style: TextStyle(fontWeight: FontWeight.w700,
-                                        fontSize: 16),),
+                                    style: TextStyle(fontWeight: FontWeight.w700,color: appTextColor5,
+                                        fontSize: 14),),
                                 ],
                               ),
                               SizedBox(height: 10,),

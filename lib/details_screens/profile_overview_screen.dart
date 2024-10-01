@@ -51,10 +51,10 @@ class _ProfileOverviewScreenState extends State<ProfileOverviewScreen> {
               ),
               ClipRRect(
                 borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(15.0),
-                  topRight: Radius.circular(15.0),
-                  bottomRight: Radius.circular(15.0),
-                  bottomLeft: Radius.circular(15.0),
+                  topLeft: Radius.circular(10.0),
+                  topRight: Radius.circular(10.0),
+                  bottomRight: Radius.circular(10.0),
+                  bottomLeft: Radius.circular(10.0),
                 ),
                 child: Container(
                   color: appcardColor,
@@ -133,10 +133,10 @@ class _ProfileOverviewScreenState extends State<ProfileOverviewScreen> {
               SizedBox(height: 10,),
               ClipRRect(
                 borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(15.0),
-                  topRight: Radius.circular(15.0),
-                  bottomRight: Radius.circular(15.0),
-                  bottomLeft: Radius.circular(15.0),
+                  topLeft: Radius.circular(10.0),
+                  topRight: Radius.circular(10.0),
+                  bottomRight: Radius.circular(10.0),
+                  bottomLeft: Radius.circular(10.0),
                 ),
                 child: Container(
                   color: appcardColor,
@@ -216,10 +216,10 @@ class _ProfileOverviewScreenState extends State<ProfileOverviewScreen> {
               SizedBox(height: 10,),
               ClipRRect(
                 borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(15.0),
-                  topRight: Radius.circular(15.0),
-                  bottomRight: Radius.circular(15.0),
-                  bottomLeft: Radius.circular(15.0),
+                  topLeft: Radius.circular(10.0),
+                  topRight: Radius.circular(10.0),
+                  bottomRight: Radius.circular(10.0),
+                  bottomLeft: Radius.circular(10.0),
                 ),
                 child: Container(
                   color: appcardColor,
@@ -298,10 +298,10 @@ class _ProfileOverviewScreenState extends State<ProfileOverviewScreen> {
               SizedBox(height: 10,),
               ClipRRect(
                 borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(15.0),
-                  topRight: Radius.circular(15.0),
-                  bottomRight: Radius.circular(15.0),
-                  bottomLeft: Radius.circular(15.0),
+                  topLeft: Radius.circular(10.0),
+                  topRight: Radius.circular(10.0),
+                  bottomRight: Radius.circular(10.0),
+                  bottomLeft: Radius.circular(10.0),
                 ),
                 child: Container(
                   color: appcardColor,

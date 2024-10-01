@@ -84,16 +84,63 @@ class _JobDetailsScreenState extends State<JobDetailsScreen> with SingleTickerPr
                       Text(
                         'Date Posted: Sept 03, 2024',
                         style: TextStyle(
-                            fontSize: 11, fontWeight: FontWeight.w500, color: appTextColor2),
+                            fontSize: 11, fontWeight: FontWeight.w500, color: appTextColor5),
                       ),
                       SizedBox(height: 10),
                       Row(
                         children: [
-                          _buildInfoContainer(Icons.contacts_outlined, 'Sept 12, 2024'),
+                          Container(
+                            height: 30,
+                            decoration: BoxDecoration(
+                                color: appbackgroundColor,
+                                borderRadius: BorderRadius.circular(15)
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                              child: Row(
+                                children: [
+                                  Image.asset('assets/icons/calendar.png',height: 18,width: 18,),
+                                  Text('Sept 12, 2024',style: TextStyle(fontSize: 12,
+                                      fontWeight: FontWeight.w400,color: appTextColor5),),
+                                ],
+                              ),
+                            ),
+                          ),
                           Spacer(),
-                          _buildInfoContainer(Icons.access_time_rounded, '5 PM - 9 PM'),
+                          Container(
+                            height: 30,
+                            decoration: BoxDecoration(
+                                color: appbackgroundColor,
+                                borderRadius: BorderRadius.circular(15)
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                              child: Row(
+                                children: [
+                                  Image.asset('assets/icons/clock.png',height: 18,width: 18,),
+                                  Text('5 PM - 9 PM',style: TextStyle(fontSize: 12,
+                                      fontWeight: FontWeight.w400,color: appTextColor5),),
+                                ],
+                              ),
+                            ),
+                          ),
                           Spacer(),
-                          _buildInfoContainer(null, 'Part-Time'),
+                          Container(
+                            height: 30,
+                            decoration: BoxDecoration(
+                                color: appbackgroundColor,
+                                borderRadius: BorderRadius.circular(15)
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                              child: Row(
+                                children: [
+                                  Text('Part-Time',style: TextStyle(fontSize: 12,
+                                      fontWeight: FontWeight.w400,color: appTextColor5),),
+                                ],
+                              ),
+                            ),
+                          ),
                         ],
                       ),
                       SizedBox(height: 10),
@@ -119,102 +166,105 @@ class _JobDetailsScreenState extends State<JobDetailsScreen> with SingleTickerPr
                 ),
               ),
               SizedBox(height: 20),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Spacer(),
-                  Column(
-                    children: [
-                      GestureDetector(
-                        onTap: () {
-                          setState(() {
-                            selected = 'Job Description';
-                          });
-                          setSelectedTab('Job Description');
-                        },
-                        child: Text(
-                          'Job Description',
-                          style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w400,
-                            color: selected == 'Job Description'
-                                ? appTextColor
-                                : appTextColor2,
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 17.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Spacer(),
+                    Column(
+                      children: [
+                        GestureDetector(
+                          onTap: () {
+                            setState(() {
+                              selected = 'Job Description';
+                            });
+                            setSelectedTab('Job Description');
+                          },
+                          child: Text(
+                            'Job Description',
+                            style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.w400,
+                              color: selected == 'Job Description'
+                                  ? appTextColor
+                                  : appTextColor2,
+                            ),
                           ),
                         ),
-                      ),
-                      Container(
-                        height: 2,
-                        width: MediaQuery.of(context).size.width / 3-5,
-                        color: selected == 'Job Description'
-                            ? appTextColor
-                            : appTextColor2,
-                      ),
-                    ],
-                  ),
-                  Spacer(),
-                  Column(
-                    children: [
-                      GestureDetector(
-                        onTap: () {
-                          setState(() {
-                            selected = 'Company info';
-                          });
-                          setSelectedTab('Company info');
-                        },
-                        child: Text(
-                          'Company',
-                          style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w400,
-                            color: selected == 'Company info'
-                                ? appTextColor
-                                : appTextColor2,
+                        Container(
+                          height: 2,
+                          width: MediaQuery.of(context).size.width / 3-20,
+                          color: selected == 'Job Description'
+                              ? appTextColor
+                              : appTextColor2,
+                        ),
+                      ],
+                    ),
+                    Spacer(),
+                    Column(
+                      children: [
+                        GestureDetector(
+                          onTap: () {
+                            setState(() {
+                              selected = 'Company info';
+                            });
+                            setSelectedTab('Company info');
+                          },
+                          child: Text(
+                            'Company',
+                            style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.w400,
+                              color: selected == 'Company info'
+                                  ? appTextColor
+                                  : appTextColor2,
+                            ),
                           ),
                         ),
-                      ),
-                      Container(
-                        height: 2,
-                        width: MediaQuery.of(context).size.width / 3-5,
-                        color: selected == 'Company info'
-                            ? appTextColor
-                            : appTextColor2,
-                      ),
-                    ],
-                  ),
-                  Spacer(),
-                  Column(
-                    children: [
-                      GestureDetector(
-                        onTap: () {
-                          setState(() {
-                            selected = 'Reviews';
-                          });
-                          setSelectedTab('Reviews');
-                        },
-                        child: Text(
-                          'Reviews',
-                          style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w400,
-                            color: selected == 'Reviews'
-                                ? appTextColor
-                                : appTextColor2,
+                        Container(
+                          height: 2,
+                          width: MediaQuery.of(context).size.width / 3-20,
+                          color: selected == 'Company info'
+                              ? appTextColor
+                              : appTextColor2,
+                        ),
+                      ],
+                    ),
+                    Spacer(),
+                    Column(
+                      children: [
+                        GestureDetector(
+                          onTap: () {
+                            setState(() {
+                              selected = 'Reviews';
+                            });
+                            setSelectedTab('Reviews');
+                          },
+                          child: Text(
+                            'Reviews',
+                            style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.w400,
+                              color: selected == 'Reviews'
+                                  ? appTextColor
+                                  : appTextColor2,
+                            ),
                           ),
                         ),
-                      ),
-                      Container(
-                        height: 2,
-                        width: MediaQuery.of(context).size.width / 3-5,
-                        color: selected == 'Reviews'
-                            ? appTextColor
-                            : appTextColor2,
-                      ),
-                    ],
-                  ),
-                  Spacer(),
-                ],
+                        Container(
+                          height: 2,
+                          width: MediaQuery.of(context).size.width / 3-20,
+                          color: selected == 'Reviews'
+                              ? appTextColor
+                              : appTextColor2,
+                        ),
+                      ],
+                    ),
+                    Spacer(),
+                  ],
+                ),
               ),
               SizedBox(height: 20),
               IndexedStack(
@@ -247,11 +297,11 @@ class _JobDetailsScreenState extends State<JobDetailsScreen> with SingleTickerPr
         padding: const EdgeInsets.symmetric(horizontal: 8.0),
         child: Row(
           children: [
-            if (icon != null) Icon(icon, color: appTextColor2),
+            if (icon != null) Icon(icon, color: appTextColor5),
             SizedBox(width: 4),
             Text(
               text,
-              style: TextStyle(fontSize: 12, fontWeight: FontWeight.w400, color: appTextColor2),
+              style: TextStyle(fontSize: 12, fontWeight: FontWeight.w400, color: appTextColor5),
             ),
           ],
         ),
@@ -287,7 +337,7 @@ class _JobDetailsScreenState extends State<JobDetailsScreen> with SingleTickerPr
                     height: 30,
                 width: 120,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(15),
+                  borderRadius: BorderRadius.circular(10),
                   color: appbuttonbgColor
                 ),
                 child: Center(
